@@ -157,3 +157,74 @@ h1 span {
 	}
 
 }
+
+/*Para test vocacional*/
+/*estilos para test_vocacional*/
+body {
+    
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    background-color: #81638b; /* Café */
+    color: #fff; /* Texto blanco */
+    width: 80%;
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+h1 {
+    color: #FFFFFF; /* Verde */
+}
+
+form {
+    margin-top: 20px;
+}
+
+label, select {
+    display: block;
+    margin-top: 10px;
+}
+
+input[type="text"], input[type="email"], select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.question {
+    margin-top: 20px;
+}
+
+button {
+    background-color: #7f228b; 
+    color: #fff; /* Texto blanco */
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #7f4caf; 
+}
+
+/* Estilos para el contenedor */
+main {
+    flex: 1; /* Esto permite que el contenedor ocupe el espacio restante en el medio */
+    display: flex;
+    justify-content: center; /* Centra horizontalmente el contenedor */
+    align-items: center; /* Centra verticalmente el contenedor */
+}
+
+/* Estilos para el cuerpo de la página */
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+}

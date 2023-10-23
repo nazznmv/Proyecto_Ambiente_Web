@@ -228,3 +228,36 @@ body {
     min-height: 100vh;
     margin: 0;
 }
+/*__________Consejos___________*/
+body {
+    
+    text-align: center;
+}
+#contenedor {
+    background: linear-gradient(rgba(47, 0, 62, 1) 0%, rgba(185, 137, 199, 1) 50%, rgba(47, 0, 62, 1));
+    margin: 0 auto;
+    max-width: 600px;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 20px;
+    margin-left: 10px;
+}
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+button {
+    background-color: rgba(47, 0, 62, 1);
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.titulo-foro{
+    background-color: rgba(47, 0, 62, 1);
+}

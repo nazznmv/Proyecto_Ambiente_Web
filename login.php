@@ -27,14 +27,19 @@
     <h2>Inicio de Sesión</h2>
     
     <?php
-    if ($_SERVER["REQUEST_METHOD"] == "POST") {
+
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+
+    include("db.php");
+
+    if (isset($_POST["username"]) && isset($_POST["password"])) {
         $username = $_POST["username"];
         $password = $_POST["password"];
-
-        echo "<p>Nombre de usuario: $username</p>";
-        echo "<p>Contraseña: $password</p>";
-        }
-    ?>
+        
+        $sql = "INSERT INTO login (username, password) VALUES ('$username', '$password')";
+}
+}
+?>
 
 <div class="login-container">
     <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">

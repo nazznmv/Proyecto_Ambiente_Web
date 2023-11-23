@@ -1,0 +1,8 @@
+@font-face{
+    font-family:Poppins-regular;
+    src: url("Poppins-Regular.ttf");
+       
+}
+p{
+    font-family:Poppins-regular;
+}

@@ -7,6 +7,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Staatliches&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/css.css">
+    <link rel="stylesheet" href="fuentes/font.css">
+    <script src="script.js"></script>
     <title></title>
 </head>
 <body>
@@ -23,68 +25,48 @@
 
       </ul>
 	</header> 
+    <div class="contenedor-imagen">
+        <img src="images/test.png" width="1729" alt="Imagen adaptable">
+      </div>
     <main>
     <div class="container">
         <h1>Test Vocacional</h1>
-        <form>
-            <label for="nombre">Nombre:</label>
-            <input type="text" id="nombre" name="nombre" required>
-
-            <label for="apellido">Apellido:</label>
-            <input type="text" id="apellido" name="apellido" required>
-
-            <label for="correo">Correo:</label>
-            <input type="email" id="correo" name="correo" required>
-
-            <label for="genero">Género:</label>
-            <select id="genero" name="genero">
-                <option value="masculino">Masculino</option>
-                <option value="femenino">Femenino</option>
-            </select>
-
-            <h2>Preguntas:</h2>
-            <div class="question">
-                <label>¿Tienes alguna preferencia por trabajar solo o en equipo?</label>
-                <input type="checkbox" name="pregunta1" value="opcion1"> Solo
-                <input type="checkbox" name="pregunta1" value="opcion2"> En equipo
+        <div class="datos-personales">
+            
+            <p>¿Cuál es tu nombre completo?</p>
+            <input class="inline-field" type="text" id="nombre" placeholder="Nombre">
+            <input class="inline-field2" type="text" id="apellidos" placeholder="Apellidos">
+            <br>
+        </div>
+        <div  class="datos-personales">
+            <p>¿Cuál es tu correo electronico?</p>
+            <input type="email" id="correo" placeholder="Correo">
+            <br>
             </div>
-
-            <div class="question">
-                <label>¿Cuál es tu nivel de interés en la tecnología y la informática?</label>
-                <input type="checkbox" name="pregunta2" value="opcion1"> Mucho
-                <input type="checkbox" name="pregunta2" value="opcion2"> Poco
-            </div>
-
-            <div class="question">
-                <label>¿Cuál es tu nivel de interés en la tecnología y la informática?</label>
-                <input type="checkbox" name="pregunta2" value="opcion1"> Mucho
-                <input type="checkbox" name="pregunta2" value="opcion2"> Poco
-            </div>
-
-            <div class="question">
-                <label>¿Prefieres trabajar en un entorno creativo o analítico?</label>
-                <input type="checkbox" name="pregunta2" value="opcion1"> Creativo
-                <input type="checkbox" name="pregunta2" value="opcion2"> Analico
-            </div>
-
-            <div class="question">
-                <label>¿Cuál es tu nivel de tolerancia al estrés?</label>
-                <input type="checkbox" name="pregunta2" value="opcion1"> Mucho
-                <input type="checkbox" name="pregunta2" value="opcion2"> Poco
-            </div>
-
-            <!-- Agrega más preguntas aquí -->
-
-            <br><button type="submit">Enviar</button>
+            <div>
+            <p for="genero">¿Que género sos?</p>
+            <div class="genero">
+              <div class="opcion-genero" id="hombre">
+                <img src="hombre.png" alt="Hombre">
+                <p>Hombre</p>
+              </div>
+              <div class="opcion-genero" id="mujer">
+                <img src="mujer.png" alt="Mujer">
+                <p>Mujer</p>
+              </div>
+              <div class="opcion-genero" id="otro">
+                <img src="otro.png" alt="Otro">
+                <p>Otro</p>
+              </div>
+            
+        </div>
+        
+            <br><a href="paso2test.html"><button>Siguiente</button></a><br>
         </form>
     </div>
 </main>
-<footer>
-        
-    <ul>
-        <li class="footer-p"><a href="politica-privacidad.html">Política de privacidad</a></li>
-        <li><a href="terminos-condiciones.html">Términos y condiciones</a></li>
-        <p>&copy; 2023 Blog Universitario. Todos los derechos reservados.</p></ul>
-</footer>
+
+
+
 </body>
 </html>

@@ -6,7 +6,7 @@ body {
 	line-height: 1.6;
 	margin: 0;
 	min-height: 100vh;
-    background-color:#ffe3e5 ;
+    background-color:#ffffff ;
 }
 ul {
   margin: 0;
@@ -159,15 +159,68 @@ h1 span {
 }
 
 /*Para test vocacional*/
+.container {
+    font-family: Arial, sans-serif;
+   display: block;
+}
+p {
+    color: #484848;
+  font-weight: 700;
+  display: block;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  text-align: center;
+  transition: color 0.3s ease-in-out;
+  }
+  
+  /* Estilos para los inputs */
+  input {
+    margin: 12px 0px 0px;
+    padding: 5px;
+    line-height: 50px;
+    border: 1px solid #d2d2d2;
+    border-radius: 30px;
+    padding: 0 25px;
+    color: #484848;
+    font-weight: 700;
+    
+  }
+  .inline-field {
+    width: 49%!important;
+    display: inline-block;
+    border-radius: 40px 8px 8px 40px!important;
+}
+.inline-field2 {
+    width: 49%!important;
+    display: inline-block;
+    border-radius: 8px 40px 40px 8px!important;
+}
+  /* Estilos para las imágenes con opacidad */
+  .opcion-genero {
+    display: inline-block;
+    margin: 20px;
+    text-align: center;
+  }
+  
+  .opcion-genero img {
+    opacity: 0.5;
+    transition: opacity 0.3s ease-in-out;
+  }
+  
+  .opcion-genero:hover img {
+    opacity: 1;
+  }
 /*estilos para test_vocacional*/
-body {
+/*body {
     
     font-family: Arial, sans-serif;
-}
-
+}*/
+/*
 .container {
-    background-color: #81638b; /* Café */
-    color: #fff; /* Texto blanco */
+    background-color: #81638b; 
+    color: #fff; 
     width: 80%;
     max-width: 500px;
     margin: 0 auto;
@@ -177,7 +230,7 @@ body {
 }
 
 h1 {
-    color: #FFFFFF; /* Verde */
+    color: #FFFFFF; 
 }
 
 form {
@@ -202,7 +255,7 @@ input[type="text"], input[type="email"], select {
 
 button {
     background-color: #7f228b; 
-    color: #fff; /* Texto blanco */
+    color: #fff;
     padding: 10px 20px;
     border: none;
     border-radius: 5px;
@@ -211,7 +264,7 @@ button {
 
 button:hover {
     background-color: #7f4caf; 
-}
+}*/
 
 /* Estilos para el contenedor */
 main {
@@ -348,3 +401,20 @@ button {
 	text-align: center;
 }
 
+/*Este estilo es para imagenes*/
+
+  
+  .contenedor-imagen {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .contenedor-imagen img {
+    max-width: 100%;
+    max-height: 100%;
+    height: auto;
+    width: auto;
+  }

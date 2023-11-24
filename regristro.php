@@ -4,13 +4,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     include("db.php");
 
-    if (isset($_POST["nombre"]) && isset($_POST["apellido"])&& isset($_POST["correo"]) && isset($_POST["password"])) {
+    if (isset($_POST["nombre"]) && isset($_POST["apellidos"])&& isset($_POST["correo"]) && isset($_POST["password"])) {
         $nombre = $_POST["nombre"];
-        $apellido = $_POST["apellido"];
+        $apellidos = $_POST["apellidos"];
         $correo = $_POST["correo"];
         $password = $_POST["password"];
         
-        $sql = "INSERT INTO regristro (nombre, apellido, correo, password) VALUES ('$nombre', '$apellido','$correo', '$password')";
+        $sql = "INSERT INTO regristo (nombre, apellidos, correo, password) VALUES ('$nombre', '$apellidos','$correo', '$password')";
         
     
     if ($conn->query($sql) === TRUE) {
@@ -53,9 +53,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <section class="form-register">
         <h1 class="titulo-foro">Formulario Registro</h1>
         <div id="contenedor">
-            <form action="registro.php" method="post">
+            <form action="regristro.php" method="post">
             <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
-                <input class="controls" type="text" name="nombres" id="nombres" placeholder="Ingrese su Nombre">
+                <input class="controls" type="text" name="nombre" id="nombre" placeholder="Ingrese su Nombre">
                 <input class="controls" type="text" name="apellidos" id="apellidos" placeholder="Ingrese su Apellido">
                 <input class="controls" type="email" name="correo" id="correo" placeholder="Ingrese su Correo">
                 <input class="controls" type="password" name="password" id="password" placeholder="Ingrese su Contraseña">

@@ -32,8 +32,9 @@
         <h1>Test Vocacional</h1>
         <form action="procesar_resultado.php" method="post">
             <p>¿Qué valor consideras más importante?</p>
-            <input type="radio" name="valores" value="honestidad"> Honestidad
-            <input type="radio" name="valores" value="responsabilidad"> Responsabilidad
+            <input type="checkbox" name="valores[]" value="honestidad"> Honestidad
+            <input type="checkbox" name="valores[]" value="responsabilidad"> Responsabilidad
+
             <!-- Otras preguntas similares -->
             
             <p>¿Qué actitud te define mejor?</p>

@@ -212,59 +212,45 @@ p {
   .opcion-genero:hover img {
     opacity: 1;
   }
-/*estilos para test_vocacional*/
-/*body {
-    
+ /*______estilos para el echo en resultado del test_______*/
+  /* Estilos para el mensaje de error */
+  .mensaje-error {
+    text-align: center;
+    font-size: 24px;
     font-family: Arial, sans-serif;
-}*/
-/*
-.container {
-    background-color: #81638b; 
-    color: #fff; 
-    width: 80%;
-    max-width: 500px;
-    margin: 0 auto;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-}
-
-h1 {
-    color: #FFFFFF; 
-}
-
-form {
     margin-top: 20px;
+    color: red; /* Por ejemplo, color de texto rojo */
 }
 
-label, select {
-    display: block;
-    margin-top: 10px;
-}
-
-input[type="text"], input[type="email"], select {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-}
-
-.question {
+/* Estilos para el mensaje de éxito */
+.mensaje-exito {
+    text-align: center;
+    font-size: 24px;
+    font-family: Arial, sans-serif;
     margin-top: 20px;
+    color: green; /* Por ejemplo, color de texto verde */
+}
+.contenedor-con-imagen {
+    position: relative;
+    width: 100%; /* Ajusta el ancho según sea necesario */
+    height: 400px; /* Ajusta la altura según sea necesario */
+    background-image: url('../images/fondo.png');
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
-button {
-    background-color: #7f228b; 
-    color: #fff;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
+.mensaje {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    font-size: 24px;
+    font-family: Arial, sans-serif;
+    color: white; /* Color del texto */
+    /* Otros estilos para el mensaje */
 }
-
-button:hover {
-    background-color: #7f4caf; 
-}*/
 
 /* Estilos para el contenedor */
 main {

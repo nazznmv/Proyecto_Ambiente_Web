@@ -31,37 +31,56 @@
     <main>
     <div class="container">
         <h1>Test Vocacional</h1>
+        <form action="procesar_resultado.php" method="post">
         <div class="datos-personales">
             
             <p>¿Cuál es tu nombre completo?</p>
-            <input class="inline-field" type="text" id="nombre" placeholder="Nombre">
-            <input class="inline-field2" type="text" id="apellidos" placeholder="Apellidos">
+            <input class="inline-field" type="text" id="nombre" name="nombre" placeholder="Nombre">
+            <input class="inline-field2" type="text" id="apellidos" name="apellidos" placeholder="Apellidos">
             <br>
         </div>
         <div  class="datos-personales">
             <p>¿Cuál es tu correo electronico?</p>
-            <input type="email" id="correo" placeholder="Correo">
+            <input type="email" id="correo" name="correo" placeholder="Correo">
             <br>
             </div>
             <div>
             <p for="genero">¿Que género sos?</p>
             <div class="genero">
-              <div class="opcion-genero" id="hombre">
-                <img src="hombre.png" alt="Hombre">
+              <div class="opcion-genero" id="hombre" onclick="seleccionarGenero('hombre', 'Hombre')">
+                <img src="images/hombre.png" alt="Hombre">
                 <p>Hombre</p>
               </div>
-              <div class="opcion-genero" id="mujer">
-                <img src="mujer.png" alt="Mujer">
+              <div class="opcion-genero" id="mujer" onclick="seleccionarGenero('mujer', 'Mujer')">
+                <img src="images/mujer.png" alt="Mujer">
                 <p>Mujer</p>
               </div>
-              <div class="opcion-genero" id="otro">
-                <img src="otro.png" alt="Otro">
+              <div class="opcion-genero" id="otro" onclick="seleccionarGenero('otro', 'Otro')">
+                <img src="images/otro.png" alt="Otro">
                 <p>Otro</p>
               </div>
+            </div>
+
+            <p>¿Qué valor consideras más importante?</p>
+            <input type="checkbox" name="valores[]" value="honestidad"> Honestidad
+            <input type="checkbox" name="valores[]" value="responsabilidad"> Responsabilidad
+
+            <!-- Otras preguntas similares -->
             
-        </div>
-        
-            <br><a href="paso2test.html"><button>Siguiente</button></a><br>
+            <p>¿Qué actitud te define mejor?</p>
+            <select name="actitudes">
+              <option value="positividad">Positividad</option>
+              <option value="perseverancia">Perseverancia</option>
+              <!-- Otras opciones -->
+            </select>
+            
+            <p>¿Cómo te consideras en liderazgo?</p>
+            <input type="checkbox" name="liderazgo[]" value="trabajo_equipo"> Buen trabajo en equipo
+            <input type="checkbox" name="liderazgo[]" value="toma_decisiones"> Buena toma de decisiones
+            <!-- Otras opciones -->
+            
+            <input type="hidden" id="generoSeleccionado" name="generoSeleccionado" value="">
+            <input type="submit" value="Enviar">
         </form>
     </div>
 </main>

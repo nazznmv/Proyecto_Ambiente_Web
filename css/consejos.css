@@ -1,0 +1,12 @@
+.btn-violet {
+    background-color: violet; /* Cambia el color de fondo al violeta */
+    color: white; /* Cambia el color del texto a blanco */
+    border: none; /* Elimina el borde del botón */
+    padding: 20px 40px; /* Ajusta el relleno */
+    margin-left: 1000px; /* Añade un margen izquierdo para separarlo del otro botón */
+    font-size: 16px; /* Cambia el tamaño del texto */
+    font-weight: bold; /* Hace el texto en negrita */
+  }
+  .btn-large {
+    font-size: 18px; /* Cambia el tamaño del botón */
+  }

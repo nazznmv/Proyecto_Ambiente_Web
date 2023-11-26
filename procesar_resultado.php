@@ -1,5 +1,9 @@
 <?php
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $nombre = $_POST['nombre'] ?? '';
+    $apellidos = $_POST['apellidos'] ?? '';
+    $correo = $_POST['correo'] ?? '';
+    $genero = $_POST['generoSeleccionado'] ?? '';
     $profesiones = array(
         "Ingeniero" => array(
             "valores" => array("honestidad", "responsabilidad"),
@@ -63,9 +67,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <div class='mensaje'>";
 
     if (empty($profesionesRecomendadas)) {
-        echo "<div class='mensaje-error'>Lo siento, no hay coincidencias con tus respuestas.</div>";
+        echo "<div class='mensaje-error'>Lo siento, $nombre $apellidos, no hay coincidencias con tus respuestas.</div>";
     } else {
-        echo "<div class='mensaje-exito'>Basado en tus respuestas, las profesiones recomendadas para ti son: ";
+        echo "<div class='mensaje-exito'>Hola $nombre $apellidos, basado en tus respuestas, las profesiones recomendadas para ti como $genero son: ";
         echo implode(", ", $profesionesRecomendadas);
         echo "</div>";
     }

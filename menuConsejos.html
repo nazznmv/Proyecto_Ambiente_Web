@@ -8,21 +8,6 @@
     <link rel="stylesheet" href="css/css.css">
     <link rel="stylesheet" href="css/consejos.css">
     <title>Foro para Estudiantes</title>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script>
-        $(document).ready(function(){
-            cargarConsejos(); // Llamada inicial para cargar los consejos al cargar la página
-
-            // Función para cargar los consejos desde mostrar_consejos.php
-            function cargarConsejos() {
-                $("#mostrar-consejos").load("mostrar_consejos.php");
-            }
-
-            // Ejemplo de recargar los consejos cada X segundos
-            setInterval(cargarConsejos, 5000); // Actualizar cada 5 segundos (5000 milisegundos)
-        });
-    </script>
-    
     
 </head>
 <body>
@@ -39,21 +24,26 @@
 
       </ul>
 	</header> 
-    <br>
-    <br>
-    <div class="menuConsejos">
-        <button type="button" class="btn btn-outline-secondary">Secondary</button>
-        <a href="menuConsejos.html">
-            <button type="button" class="btn btn-violet btn-large">Agregar Consejo</button>
-          </a>
-          
+    
+    <h1 class="titulo-foro">Foro para Estudiantes</h1>
+    <h1>Agregar Consejo</h1>
+  <form action="BD.php" method="post">
+    <label for="nombre">Nombre:</label>
+    <input type="text" id="nombre" name="nombre" required><br><br>
+    <label for="apellidos">Apellidos:</label>
+    <input type="text" id="apellidos" name="apellidos"><br><br>
+    <div class="form-floating">
+        <label for="comentario">Comentario:</label><br>
+        <textarea class="form-control" id="comentario" name="comentario" rows="4" cols="50" required
+         placeholder="Leave a comment here" id="floatingTextarea2" style="height: 100px"></textarea>
+        
       </div>
-
-       <!-- Sección para mostrar los consejos -->
-    <div id="mostrar-consejos">
-
-    </div>
+    
+    <input type="submit" value="Enviar">
+  </form>
+  <a href="consejos.html">Volver al Inicio</a>
 
     
 </body>
 </html>
+

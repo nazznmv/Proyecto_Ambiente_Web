@@ -235,9 +235,10 @@ p {
     color: black; /* Por ejemplo, color de texto verde */
 }
 .contenedor-con-imagen {
-    position: relative;
-    width: 300%; /* Ajusta el ancho según sea necesario */
-    height: 700px; /* Ajusta la altura según sea necesario */
+    margin: 55px;
+    display: flex;
+    width: 93%; /* Ajusta el ancho según sea necesario */
+    height: 800px; /* Ajusta la altura según sea necesario */
     background-image: url('../images/fondo.png');
     background-size: contain;
     background-position: center;
@@ -407,4 +408,113 @@ button {
     max-height: 100%;
     height: auto;
     width: auto;
+  }
+/***************HOME***********/
+section {
+    padding: 2em;
+    text-align: center;
+  }
+
+  section h2 {
+    color: #333;
+  }
+
+  section p {
+    font-size: 1.1em;
+    line-height: 1.6;
+  }
+
+  .features {
+    display: flex;
+    justify-content: space-around;
+    margin: 2em 0;
+  }
+
+  .feature {
+    flex: 1;
+    padding: 1em;
+    text-align: center;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    margin: 0 1em;
+  }
+
+  .content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2em;
+  }
+
+  .text-block {
+    flex: 1;
+    text-align: left;
+  }
+
+  .image-block {
+    flex: 1;
+    text-align: center;
+  }
+
+  .image-block img {
+    width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+
+
+  .image-block {
+    display: flex;
+    justify-content: space-around;
+    margin: 20px;
+  }
+
+
+  .image-container {
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+    transition: transform 0.3s;
+    width: 400px;
+    height: 350px;
+  }
+
+  .image-container:hover {
+    transform: scale(1.1);
+  }
+
+  .image-container img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    transition: transform 0.3s;
+  }
+
+  .text {
+    position: relative;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 3px;
+    text-align: center;
+    box-sizing: border-box;
+    transition: background-color 0.3s;
+    font-family:Poppins-regular ;
+  }
+
+  .image-container:hover .text {
+    background-color: rgba(255, 255, 255, 0.9);
+  }
+
+  .pIndex{
+    font-size: 15px;
+    opacity: 80%;
+
+  }
+  .hIndex{
+    font-size: 18px;
+
+    color: rgb(82, 72, 85);
   }

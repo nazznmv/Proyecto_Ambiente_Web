@@ -409,6 +409,7 @@ button {
     height: auto;
     width: auto;
   }
+
 /***************HOME***********/
 section {
     padding: 2em;
@@ -518,3 +519,32 @@ section {
 
     color: rgb(82, 72, 85);
   }
+  /************FINAL HOME**********/
+
+  /***********NOSOTROS*************/
+  #nosotrosU{
+    color: rgb(74, 25, 25)404;
+    font-family: Poppins-Bold;
+  }
+  .lead {
+    font-size: 1.25rem;
+    font-weight: 300;
+    margin: 2em;
+  }
+  .bg-image-full {
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-position: center;
+    background-size: cover;
+  }
+  .bg-image-full {
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-position: center;
+    background-size: cover;
+  }
+  .lead {
+    font-size: 1.25rem;
+    font-weight: 300;
+    margin: 2em;  }
+  

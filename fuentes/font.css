@@ -3,6 +3,20 @@
     src: url("Poppins-Regular.ttf");
        
 }
+@font-face{
+    font-family:Poppins-Bold;
+    src: url("Poppins-Bold.ttf");
+       
+}
+@font-face{
+    font-family:Poppins-ExtraLight;
+    src: url("Poppins-ExtraLight.ttf");
+       
+}
 p{
     font-family:Poppins-regular;
+}
+h3{
+    font-family:Poppins-regular;
+ 
 }

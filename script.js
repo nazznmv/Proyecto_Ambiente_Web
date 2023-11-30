@@ -1,4 +1,4 @@
-
+//codigo para footer
 let lastScrollTop = 0;
 
 window.addEventListener('scroll', function() {
@@ -14,7 +14,7 @@ window.addEventListener('scroll', function() {
 
   lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
 }, false);
-
+//codigo para cambiar la alerta del test vocacional
 document.addEventListener('DOMContentLoaded', function() {
     const inputs = document.querySelectorAll('input');
     const paragraphs = document.querySelectorAll('p');
@@ -33,13 +33,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
   
-    paragraphs.forEach(paragraph => {
-      paragraph.addEventListener('mouseenter', function() {
-        if (paragraph.innerText === 'Hombre' || paragraph.innerText === 'Mujer' || paragraph.innerText === 'Otro') {
-          paragraph.style.color = '';
-        }
-      });
-    });
+    
   
     document.addEventListener('mouseleave', function() {
       let isEmpty = false;
@@ -55,4 +49,18 @@ document.addEventListener('DOMContentLoaded', function() {
       }
     });
   });
+
+  function seleccionarGenero(generoId, generoNombre) {
+    const opcionesGenero = document.querySelectorAll('.opcion-genero');
+    opcionesGenero.forEach(opcion => {
+      opcion.classList.remove('selected');
+    });
+  
+    const opcionSeleccionada = document.getElementById(generoId);
+    opcionSeleccionada.classList.add('selected');
+    
+    // Guardar el género seleccionado en el campo oculto
+    document.getElementById('generoSeleccionado').value = generoNombre;
+  }
+  
   

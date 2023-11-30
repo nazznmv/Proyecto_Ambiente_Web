@@ -161,7 +161,7 @@ h1 span {
 /*Para test vocacional*/
 .container {
     font-family: Arial, sans-serif;
-   display: block;
+    display: block;
 }
 p {
     color: #484848;
@@ -185,6 +185,7 @@ p {
     padding: 0 25px;
     color: #484848;
     font-weight: 700;
+    display: block;
     
   }
   .inline-field {
@@ -197,74 +198,64 @@ p {
     display: inline-block;
     border-radius: 8px 40px 40px 8px!important;
 }
-  /* Estilos para las imágenes con opacidad */
+.genero {
+    display: flex; /* Establece el contenedor como un flexbox */
+  }
+  
   .opcion-genero {
-    display: inline-block;
-    margin: 20px;
-    text-align: center;
+    margin-right: 10px; /* Añade espacio entre cada opción */
   }
-  
+  /* Estilos para las imágenes con opacidad */
   .opcion-genero img {
-    opacity: 0.5;
-    transition: opacity 0.3s ease-in-out;
+    opacity: 0.5; /* Inicialmente, estableceremos la opacidad */
+    transition: opacity 0.3s ease; /* Agregamos transición para suavizar el cambio */
+    max-width: 50px; /* Cambia el tamaño máximo de las imágenes */
+    height: auto; /* Ajusta la altura automáticamente para mantener la proporción */
   }
   
-  .opcion-genero:hover img {
-    opacity: 1;
+  .opcion-genero.selected img {
+    opacity: 1; /* Cuando está seleccionado, mostrar la imagen a todo color */
   }
-/*estilos para test_vocacional*/
-/*body {
-    
+ /*______estilos para el echo en resultado del test_______*/
+  /* Estilos para el mensaje de error */
+  .mensaje-error {
+    text-align: center;
+    font-size: 24px;
     font-family: Arial, sans-serif;
-}*/
-/*
-.container {
-    background-color: #81638b; 
-    color: #fff; 
-    width: 80%;
-    max-width: 500px;
-    margin: 0 auto;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-}
-
-h1 {
-    color: #FFFFFF; 
-}
-
-form {
     margin-top: 20px;
+    color: red; /* Por ejemplo, color de texto rojo */
 }
 
-label, select {
-    display: block;
-    margin-top: 10px;
-}
-
-input[type="text"], input[type="email"], select {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-}
-
-.question {
+/* Estilos para el mensaje de éxito */
+.mensaje-exito {
+    text-align: center;
+    font-size: 24px;
+    font-family: Arial, 'Times New Roman', Times, serif;
     margin-top: 20px;
+    color: black; /* Por ejemplo, color de texto verde */
+}
+.contenedor-con-imagen {
+    margin: 55px;
+    display: flex;
+    width: 93%; /* Ajusta el ancho según sea necesario */
+    height: 800px; /* Ajusta la altura según sea necesario */
+    background-image: url('../images/fondo.png');
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
-button {
-    background-color: #7f228b; 
-    color: #fff;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
+.mensaje {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    font-size: 24px;
+    font-family: Arial, sans-serif;
+    color: white; /* Color del texto */
+    /* Otros estilos para el mensaje */
 }
-
-button:hover {
-    background-color: #7f4caf; 
-}*/
 
 /* Estilos para el contenedor */
 main {
@@ -418,3 +409,142 @@ button {
     height: auto;
     width: auto;
   }
+
+/***************HOME***********/
+section {
+    padding: 2em;
+    text-align: center;
+  }
+
+  section h2 {
+    color: #333;
+  }
+
+  section p {
+    font-size: 1.1em;
+    line-height: 1.6;
+  }
+
+  .features {
+    display: flex;
+    justify-content: space-around;
+    margin: 2em 0;
+  }
+
+  .feature {
+    flex: 1;
+    padding: 1em;
+    text-align: center;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    margin: 0 1em;
+  }
+
+  .content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2em;
+  }
+
+  .text-block {
+    flex: 1;
+    text-align: left;
+  }
+
+  .image-block {
+    flex: 1;
+    text-align: center;
+  }
+
+  .image-block img {
+    width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+
+
+  .image-block {
+    display: flex;
+    justify-content: space-around;
+    margin: 20px;
+  }
+
+
+  .image-container {
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+    transition: transform 0.3s;
+    width: 400px;
+    height: 350px;
+  }
+
+  .image-container:hover {
+    transform: scale(1.1);
+  }
+
+  .image-container img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    transition: transform 0.3s;
+  }
+
+  .text {
+    position: relative;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 3px;
+    text-align: center;
+    box-sizing: border-box;
+    transition: background-color 0.3s;
+    font-family:Poppins-regular ;
+  }
+
+  .image-container:hover .text {
+    background-color: rgba(255, 255, 255, 0.9);
+  }
+
+  .pIndex{
+    font-size: 15px;
+    opacity: 80%;
+
+  }
+  .hIndex{
+    font-size: 18px;
+
+    color: rgb(82, 72, 85);
+  }
+  /************FINAL HOME**********/
+
+  /***********NOSOTROS*************/
+  #nosotrosU{
+    color: rgb(74, 25, 25)404;
+    font-family: Poppins-Bold;
+  }
+  .lead {
+    font-size: 1.25rem;
+    font-weight: 300;
+    margin: 2em;
+  }
+  .bg-image-full {
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-position: center;
+    background-size: cover;
+  }
+  .bg-image-full {
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-position: center;
+    background-size: cover;
+  }
+  .lead {
+    font-size: 1.25rem;
+    font-weight: 300;
+    margin: 2em;  }
+  

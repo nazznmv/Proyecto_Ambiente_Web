@@ -48,7 +48,7 @@ COMMIT;
 
 create table Proyecto.consejos (
   id_Consejos INT NOT NULL AUTO_INCREMENT,
-  nombre VARCHAR(30) NOT NULL, /*cada producto tenga su debida categoría*/
+  nombre VARCHAR(30) NOT NULL, 
   apellidos varchar(1024),
   comentario varchar(1024),
   PRIMARY KEY (id_Consejos)

@@ -1,17 +1,4 @@
 <?php
-$servername = "localhost"; // Cambia esto con la dirección de tu servidor MySQL
-$username = "root"; //  nombre de usuario
-$password = "mel"; //  contraseña
-$dbname = "Proyecto"; // Nombre de base de datos
-
-// Crear conexión
-$conn = new mysqli($servername, $username, $password, $dbname);
-
-// Verificar conexión
-if ($conn->connect_error) {
-  die("La conexión falló: " . $conn->connect_error);
-}
-
 // Obtener datos del formulario
 $nombre = $_POST['nombre'];
 $apellidos = $_POST['apellidos'];

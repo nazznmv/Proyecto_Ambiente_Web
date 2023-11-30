@@ -2,7 +2,7 @@
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
-    include("db.php");
+    include("conexion_db.php");
 
     if (isset($_POST["nombre"]) && isset($_POST["apellidos"])&& isset($_POST["correo"]) && isset($_POST["password"])) {
         $nombre = $_POST["nombre"];
@@ -36,22 +36,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     <header class="header">
         <h1 class="logo">
-            <a href="index.html">Universiblog &nbsp;<span>Tu Portal Informativo</span></a>
+            <a href="index.php">Universiblog &nbsp;<span>Tu Portal Informativo</span></a>
         </h1>
-        
-        <ul class="main-nav">
-            <li><a href="index.html">Inicio</a></li>
-            <li><a href="consejos.html">Consejos</a></li>
-            <li><a href="evaluacion_profes.html">Evaluaciones</a></li>
-            <li><a href="horarios.html">Horarios</a></li>
-            <li><a href="resenha_uni.html">Reseña</a></li>
-            <li><a href="test_vocacional.html">Test</a></li>
-            <li><a href="nosotros.html">Nosotros</a></li>
-        </ul>
     </header>
 
     <section class="form-register">
-        <h1 class="titulo-foro">Formulario Registro</h1>
+        <h1 class="titulo-foro-registro">Formulario Registro</h1>
         <div id="contenedor">
             <form action="regristro.php" method="post">
             <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
@@ -68,6 +58,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             </form>
         </div>
     </section>
-    <footer class="footer">
+    <footer>
+        <ul>
+            <li class="footer-p"><a href="politica-privacidad.html">Política de privacidad</a></li>
+            <li><a href="terminos-condiciones.html">Términos y condiciones</a></li>
+            <p>&copy; 2023 Blog Universitario. Todos los derechos reservados
+        </ul>
+    </footer>
 </body>
 </html>

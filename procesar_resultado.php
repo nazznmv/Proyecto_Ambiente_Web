@@ -1,5 +1,8 @@
 <?php
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
+
+    include("conexion_db.php");
+    
     $nombre = $_POST['nombre'] ?? '';
     $apellidos = $_POST['apellidos'] ?? '';
     $correo = $_POST['correo'] ?? '';

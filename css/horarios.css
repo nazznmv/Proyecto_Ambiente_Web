@@ -1,0 +1,29 @@
+.h1-horarios{
+    color: rgb(74, 25, 58);
+    size: 15px;
+    font-family: Poppins-Bold;
+}
+
+.h2-horarios{
+    color: rgb(74, 25, 58);
+    font-family: Poppins-Bold;
+}
+
+.h4-horarios{
+    color: rgb(74, 25, 58);
+    font-family: Poppins-Bold;
+}
+
+.h4-horarios-url{
+    color:rgba(185, 137, 199, 1);
+    font-family: Poppins-Bold;
+}
+
+.imagen-horarios{
+    width: 851px;
+    height: 501px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 30px;
+}

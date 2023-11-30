@@ -7,10 +7,13 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Staatliches&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/css.css">
+    <link rel="stylesheet" href="css/evaluacion.css">
+    <link rel="stylesheet" href="fuentes/font.css">
+    <title>Evaluación Docente</title>
 </head>
 <body>
     <header class="header">
-        <h1 class="logo"><a href="index.html">Universiblog &nbsp<span>Tu Portal Informativo</span></a></h1>
+        <h1 class="logo"><a href="index.php">Universiblog &nbsp<span>Tu Portal Informativo</span></a></h1>
         <ul class="main-nav">
             <li><a href="index.php">Inicio</a></li>
             <li><a href="consejos.php">Consejos</a></li>
@@ -22,7 +25,7 @@
         </ul>
     </header> 
 
-    <h1 class="titulo-foro">Evaluación de docentes</h1>
+    <h1 class="h1-evaluacion">Evaluación de docentes</h1>
     <div id="contenedor">
         <?php
         // Verificar si el formulario ha sido enviado
@@ -63,5 +66,13 @@
         }
         ?>
     </div>
+    <footer>
+        <ul>
+            <li class="footer-p"><a href="politica-privacidad.html">Política de privacidad</a></li>
+            <li><a href="terminos-condiciones.html">Términos y condiciones</a></li>
+            <p>&copy; 2023 Blog Universitario. Todos los derechos reservados
+        </ul>
+    </footer>
+
 </body>
 </html>

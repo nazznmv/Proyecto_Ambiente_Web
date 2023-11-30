@@ -12,16 +12,7 @@
 <body>
 
     <header class="header">
-        <h1 class="logo"><a href="index.html">Universiblog &nbsp;<span>Tu Portal Informativo</span></a></h1>
-        <ul class="main-nav">
-            <li><a href="index.html">Inicio</a></li>
-            <li><a href="consejos.html">Consejos</a></li>
-            <li><a href="evaluacion_profes.html">Evaluaciones</a></li>
-            <li><a href="horarios.html">Horarios</a></li>
-            <li><a href="resenha_uni.html">Reseña</a></li>
-            <li><a href="test_vocacional.html">Test</a></li>
-            <li><a href="nosotros.html">Nosotros</a></li>
-        </ul>
+        <h1 class="logo"><a href="index.php">Universiblog &nbsp;<span>Tu Portal Informativo</span></a></h1>
     </header> 
 
     <h2>Inicio de Sesión</h2>
@@ -30,7 +21,7 @@
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
-    include("db.php");
+    include("conexion_db.php");
 
     if (isset($_POST["username"]) && isset($_POST["password"])) {
         $username = $_POST["username"];
@@ -52,6 +43,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <input type="submit" value="Iniciar Sesión">
     </form>
 </div>
-<footer class="footer">
+    <footer>
+        <ul>
+            <li class="footer-p"><a href="politica-privacidad.html">Política de privacidad</a></li>
+            <li><a href="terminos-condiciones.html">Términos y condiciones</a></li>
+            <p>&copy; 2023 Blog Universitario. Todos los derechos reservados
+        </ul>
+    </footer>
 </body>
 </html>

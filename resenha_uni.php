@@ -7,6 +7,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Staatliches&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/css.css">
+    <link rel="stylesheet" href="css/resenha.css">
+    <link rel="stylesheet" href="fuentes/font.css">
+    <title>Reseñas</title>
 </head>
 <body>
     <header class="header">
@@ -22,7 +25,7 @@
         </ul>
     </header> 
 
-    <h1 class="titulo-resenha">Reseñas sobre la Universidad</h1>
+    <h1 class="h1-resenha">Reseñas sobre la Universidad</h1>
     <div id="contenedor">
         <form method="post" action="procesar_resena.php">
             <label for="nombre">Nombre:</label><br>
@@ -37,5 +40,12 @@
             <button type="submit">Enviar</button>
         </form>
     </div>
+    <footer>
+        <ul>
+            <li class="footer-p"><a href="politica-privacidad.html">Política de privacidad</a></li>
+            <li><a href="terminos-condiciones.html">Términos y condiciones</a></li>
+            <p>&copy; 2023 Blog Universitario. Todos los derechos reservados
+        </ul>
+    </footer>
 </body>
 </html>

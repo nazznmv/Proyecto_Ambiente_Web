@@ -93,5 +93,13 @@
                 ¡Haz que tu viaje universitario sea excepcional!</p>
         </div>
     </section>
+
+    <footer>
+        <ul>
+            <li class="footer-p"><a href="politica-privacidad.html">Política de privacidad</a></li>
+            <li><a href="terminos-condiciones.html">Términos y condiciones</a></li>
+            <p>&copy; 2023 Blog Universitario. Todos los derechos reservados
+        </ul>
+    </footer>
 </body>
 </html>

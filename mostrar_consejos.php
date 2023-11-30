@@ -1,17 +1,4 @@
 <?php
-$servername = "localhost";
-$username = "root";
-$password = "mel";
-$dbname = "Proyecto";
-
-// Crear conexión
-$conn = new mysqli($servername, $username, $password, $dbname);
-
-// Verificar conexión
-if ($conn->connect_error) {
-    die("La conexión falló: " . $conn->connect_error);
-}
-
 // Consulta SQL para obtener todos los consejos
 $sql = "SELECT nombre, apellidos, comentario FROM consejos";
 $result = $conn->query($sql);

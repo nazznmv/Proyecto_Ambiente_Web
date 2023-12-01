@@ -5,6 +5,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Staatliches&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/css.css">
     <link rel="stylesheet" href="css/consejos.css">
     <title>Foro para Estudiantes</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -31,11 +32,13 @@
             <button type="button" class="btn btn-violet btn-large">Agregar Consejo</button>
         </a>
     </div>
-
     <div id="mostrar-consejos">
         <?php
-    include_once 'funciones.php';
-    ?>
+           // $consejos = obtenerConsejos(); 
+           // foreach ($consejos as $consejo) {
+            //    echo "<div class='consejo'>$consejo</div>";
+           // }
+        //?> 
     </div>
 </body>
 </html>

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -8,6 +8,8 @@
     <link rel="stylesheet" href="css/css.css">
     <link rel="stylesheet" href="css/consejos.css">
     <title>Foro para Estudiantes</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="js/script2.js"></script>
 </head>
 <body>
     <header class="header">
@@ -22,22 +24,28 @@
             <li><a href="nosotros.php">Nosotros</a></li>
         </ul>
     </header> 
+    <br>
+    <br>
+    <div class="menuConsejos">
+        <button type="button" class="btn btn-outline-secondary">Secondary</button>
+        <a href="menuConsejos.php">
+            <button type="button" class="btn btn-violet btn-large">Agregar Consejo</button>
+        </a>
+    </div>
 
-    <h1 class="titulo-foro">Foro para Estudiantes</h1>
-    <h1>Agregar Consejo</h1>
-    <form action="procesar_consejos.php" method="post">
-        <label for="nombre">Nombre:</label>
-        <input type="text" id="nombre" name="nombre" required><br><br>
-        <label for="apellidos">Apellidos:</label>
-        <input type="text" id="apellidos" name="apellidos"><br><br>
-        <div class="form-floating">
-            <label for="comentario">Comentario:</label><br>
-            <textarea class="form-control" id="comentario" name="comentario" rows="4" cols="50" required
-                placeholder="Leave a comment here" id="floatingTextarea2" style="height: 100px"></textarea>
-        </div>
-        
-        <input type="submit" value="Enviar">
-    </form>
-    <a href="consejos.php">Volver al Inicio</a>
+    <div id="mostrar-consejos">
+        <?php
+          function obtenerConsejos() {
+            // Aquí debes tener la lógica para obtener los consejos, por ejemplo, desde una base de datos
+            // En este ejemplo, simplemente devolveremos un array con algunos consejos de muestra.
+            return [
+                "Consejo 1: Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+                "Consejo 2: Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+                "Consejo 3: Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris."
+            ];
+        }
+        ?> 
+    </div>
 </body>
 </html>
+

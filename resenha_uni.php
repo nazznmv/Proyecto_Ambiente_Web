@@ -26,20 +26,24 @@
     </header> 
 
     <h1 class="h1-resenha">Reseñas sobre la Universidad</h1>
-    <div id="contenedor">
-        <form method="post" action="procesar_resena.php">
-            <label for="nombre">Nombre:</label><br>
-            <input type="text" id="nombre" name="nombre"><br>
+    <div class="contenedor-resenha">
+        <form action="procesar_resenha.php" method="post">
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" required>
 
-            <label for="apellido">Apellido:</label><br>
-            <input type="text" id="apellido" name="apellido"><br>
+            <label for="apellido">Apellido:</label>
+            <input type="text" id="apellido" name="apellido" required>
 
-            <label for="comentario">Comentario:</label><br>
-            <textarea id="comentario" name="comentario" rows="4"></textarea><br>
+            <label for="comentario">Comentario:</label>
+            <textarea id="comentario" name="comentario" rows="4" required></textarea><br>
 
             <button type="submit">Enviar</button>
         </form>
     </div>
+
+
+    
+
     <footer>
         <ul>
             <li class="footer-p"><a href="politica-privacidad.html">Política de privacidad</a></li>

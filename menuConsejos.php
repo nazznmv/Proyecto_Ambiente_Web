@@ -25,7 +25,7 @@
 
     <h1 class="titulo-foro">Foro para Estudiantes</h1>
     <h1>Agregar Consejo</h1>
-    <form action="BD.php" method="post">
+    <form action="procesar_consejos.php" method="post">
         <label for="nombre">Nombre:</label>
         <input type="text" id="nombre" name="nombre" required><br><br>
         <label for="apellidos">Apellidos:</label>

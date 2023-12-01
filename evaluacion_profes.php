@@ -7,7 +7,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Staatliches&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/css.css">
-    <link rel="stylesheet" href="css/evaluacion.css">
+    <link rel="stylesheet" href="css/resenha.css">
     <link rel="stylesheet" href="fuentes/font.css">
     <title>Evaluación Docente</title>
 </head>
@@ -25,28 +25,8 @@
         </ul>
     </header> 
 
-    <h1 class="h1-evaluacion">Evaluación de docentes</h1>
-    <div id="contenedor">
-        <?php
-        // Verificar si el formulario ha sido enviado
-        if ($_SERVER["REQUEST_METHOD"] == "POST") {
-            // Procesar los datos del formulario
-            $nombre = $_POST["nombre"];
-            $curso = $_POST["curso"];
-            $carrera = $_POST["carrera"];
-            $experiencia = $_POST["experiencia"];
-
-            // Aquí puedes realizar acciones con los datos, como almacenarlos en una base de datos
-
-            // Por ejemplo, imprimir los datos por ahora
-            echo "<h2>Datos enviados:</h2>";
-            echo "<p><strong>Nombre del docente:</strong> $nombre</p>";
-            echo "<p><strong>Curso que imparte:</strong> $curso</p>";
-            echo "<p><strong>Carrera:</strong> $carrera</p>";
-            echo "<p><strong>Experiencia:</strong> $experiencia</p>";
-        } else {
-            // Mostrar el formulario si no se ha enviado
-            ?>
+    <h1 class="h1-resenha">Evaluación de docentes</h1>
+        <div class="contenedor-resenha">
             <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>">
                 <label for="nombre">Nombre del docente:</label><br>
                 <input type="text" id="nombre" name="nombre" required><br>
@@ -62,9 +42,6 @@
 
                 <button type="submit">Enviar</button>
             </form>
-            <?php
-        }
-        ?>
     </div>
     <footer>
         <ul>

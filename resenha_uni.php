@@ -25,23 +25,24 @@
         </ul>
     </header> 
 
-    <h1 class="h1-resenha">Reseñas sobre la Universidad</h1>
-    <div class="contenedor-resenha">
-        <form action="procesar_resenha.php" method="post">
-            <label for="nombre">Nombre:</label>
-            <input type="text" id="nombre" name="nombre" required>
+    <section class="form-resenha">
+        <h1 class="h1-resenha">Reseñas sobre la Universidad</h1>
+        <div class="contenedor-resenha">
+            <form action="procesar_resenha.php" method="post">
+            <form action="<?php echo htmlspecialchars_decode($_SERVER["PHP_SELF"]); ?>" method="post"></form>
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre" required>
 
-            <label for="apellido">Apellido:</label>
-            <input type="text" id="apellido" name="apellido" required>
+                <label for="apellido">Apellido:</label>
+                <input type="text" id="apellido" name="apellido" required>
 
-            <label for="comentario">Comentario:</label>
-            <textarea id="comentario" name="comentario" rows="4" required></textarea><br>
+                <label for="comentario">Comentario:</label>
+                <textarea id="comentario" name="comentario" rows="4" required></textarea><br>
 
-            <button type="submit">Enviar</button>
-        </form>
-    </div>
-
-
+                <button type="submit">Enviar</button>
+            </form>
+        </div>
+    </section>
     
 
     <footer>

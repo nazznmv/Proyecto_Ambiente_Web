@@ -61,18 +61,13 @@
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="nosotros.php">Nosotros</a>
-                </li>
-                
+                </li>               
                 </ul>
 </div>
         </div>
-
-
     </div>
     </div>
 </nav>
-
-
 </header>
     <!-----------CONTENIDO----------->
 
@@ -135,7 +130,7 @@
     <img src="images/BARRA.png" alt=""/><br>
 
     <div class="p-format2"><p>Lee artículos escritos por estudiantes de distintas universidades del país,
-                con los que podrás aprender de sus experiencias en la universidad..
+                con los que podrás aprender de sus experiencias como universitarios...
     
         </p></div>
    

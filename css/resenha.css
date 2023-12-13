@@ -2,6 +2,15 @@
     color: rgb(74, 25, 58);
     size: 15px;
     font-family: Poppins-Bold;
+    text-align: center;
+    justify-content: center;
+}
+.h1-evaluacion{
+    color: rgb(74, 25, 58);
+    size: 15px;
+    font-family: Poppins-Bold;
+    text-align: center;
+    justify-content: center;
 }
 
 .contenedor-resenha{

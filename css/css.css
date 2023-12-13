@@ -163,6 +163,9 @@ h1 span {
 .container {
     font-family: Arial, sans-serif;
     display: block;
+    text-align: center;
+    justify-content: center;
+    margin: 2em 0 1em;
 }
 p {
     color: #484848;
@@ -187,20 +190,24 @@ p {
     color: #484848;
     font-weight: 700;
     display: block;
-    
   }
   .inline-field {
     width: 49%!important;
     display: inline-block;
     border-radius: 40px 8px 8px 40px!important;
+    
 }
 .inline-field2 {
     width: 49%!important;
     display: inline-block;
     border-radius: 8px 40px 40px 8px!important;
+    
 }
 .genero {
     display: flex; /* Establece el contenedor como un flexbox */
+    text-align: center;
+    justify-content: center;
+    margin: 2em 0 1em;
   }
   
   .opcion-genero {

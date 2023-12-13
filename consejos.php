@@ -11,6 +11,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <title>Foro para Estudiantes</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <script src="js/script_consejo.js"></script>
 
     <script>
@@ -69,7 +70,12 @@
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="nosotros.php">Nosotros</a>
-                </li>               
+                </li> 
+                <li class="nav-item">
+                <a class="nav-link" href="registro.php">
+                 <i class="fas fa-user"></i> 
+                 </a>
+                 </li>               
                 </ul>
 </div>
         </div>
@@ -79,10 +85,16 @@
 </header>
 <img src="images/consejo.png" alt=""/>
     <br>
+    <div class="p-format"><p style="font-size: 50px">¡POSTEA TUS EXPERIENCIAS ACADEMICAS!</p></div>
+    <div class="p-format2"><p>Donde estudiantes comparten valiosos consejos para mejorar tu experiencia universitaria. 
+        Aquí encontrarás sabiduría colectiva para hacer de tu tiempo en la universidad algo excepcional. ¡Explora, conecta y 
+        avanza hacia el éxito académico juntos! 
+    
+        </p></div>
     <br>
     <div class="d-grid gap-2 col-6 mx-auto">
-    <button class="btn btn-dark mt-3 mb-3" id="btnMostrarFormulario">Agregar Consejo</button>
-    </div>
+    <button class="btn  btn-outline-dark mt-3 mb-3 rounded-pill" id="btnMostrarFormulario">¿Tienes un consejo para compartir?</button>
+</div>
     <div class="container">
     
     <div id="formularioConsejo" style="display: none;">

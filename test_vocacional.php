@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="css/css.css">
     <link rel="stylesheet" href="css/h&f.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 
     <link rel="stylesheet" href="fuentes/font.css">
     <script src="js/script.js"></script>
@@ -62,7 +63,13 @@
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="nosotros.php">Nosotros</a>
-                </li>               
+                </li>
+                <li class="nav-item">
+                <a class="nav-link" href="registro.php">
+                 <i class="fas fa-user"></i> 
+                 </a>
+                 </li>
+
                 </ul>
 </div>
         </div>
@@ -89,24 +96,39 @@
                     <br>
                 </div>
                 <div>
+                <br>
+                <br>
                     <p for="genero">¿Qué género sos?</p>
                     <div class="genero">
-                        <!-- ... (código del género) ... -->
-                    </div>
+                    <div class="opcion-genero" id="hombre" onclick="seleccionarGenero('hombre', 'Hombre')">
+                <img src="images/hombre.png" alt="Hombre">
+                <p>Hombre</p>
+              </div>
+              <div class="opcion-genero" id="mujer" onclick="seleccionarGenero('mujer', 'Mujer')">
+                <img src="images/mujer.png" alt="Mujer">
+                <p>Mujer</p>
+              </div>
+              <div class="opcion-genero" id="otro" onclick="seleccionarGenero('otro', 'Otro')">
+                <img src="images/otro.png" alt="Otro">
+                <p>Otro</p>
+              </div>
+              <br>
+              <br>
+</div>
                     
                     <p>¿Qué valor consideras más importante?</p>
                     <input type="checkbox" name="valores[]" value="honestidad"> Honestidad
                     <input type="checkbox" name="valores[]" value="responsabilidad"> Responsabilidad
 
                     <!-- Otras preguntas similares -->
-
+                    <br><br>
                     <p>¿Qué actitud te define mejor?</p>
                     <select name="actitudes">
                         <option value="positividad">Positividad</option>
                         <option value="perseverancia">Perseverancia</option>
                         <!-- Otras opciones -->
                     </select>
-
+                    <br><br>
                     <p>¿Cómo te consideras en liderazgo?</p>
                     <input type="checkbox" name="liderazgo[]" value="trabajo_equipo"> Buen trabajo en equipo
                     <input type="checkbox" name="liderazgo[]" value="toma_decisiones"> Buena toma de decisiones

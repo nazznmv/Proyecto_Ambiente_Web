@@ -69,3 +69,22 @@ body {
     bottom: 0;
     width: 100%;
 }
+
+.vertical-line {
+    border-left: 1px solid #ccc;
+    height: 100%;
+}
+.align-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh; /* Para que ocupe al menos el 100% del alto de la pantalla */
+}
+/* Contenedor principal */
+.container-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Tres columnas iguales */
+    align-items: center;
+    justify-items: center;
+    height: 100vh;
+}

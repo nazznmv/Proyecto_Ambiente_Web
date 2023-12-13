@@ -56,45 +56,21 @@ CREATE TABLE `evaluacion` (
   `carrera` varchar(200) NOT NULL,
   `experiencia` varchar(550) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+-------------------------------------------------------
 
--- --------------------------------------------------------
-
---
--- Estructura de tabla para la tabla `login`
---
-
-CREATE TABLE `login` (
-  `username` varchar(100) NOT NULL,
-  `password` varchar(100) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
-
---
--- Volcado de datos para la tabla `login`
---
-
-INSERT INTO `login` (`username`, `password`) VALUES
-('josethmontero06@gmail.com', '1234');
-
--- --------------------------------------------------------
-
---
--- Estructura de tabla para la tabla `regristo`
---
-
-CREATE TABLE `regristo` (
-  `nombre` varchar(100) NOT NULL,
-  `apellidos` varchar(100) NOT NULL,
-  `correo` varchar(100) NOT NULL,
-  `password` varchar(100) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
-
---
--- Volcado de datos para la tabla `regristo`
---
-
-INSERT INTO `regristo` (`nombre`, `apellidos`, `correo`, `password`) VALUES
-('Joseth', 'Montero', 'fio234@gmail.com', '12345');
-
+create table proyecto.registro (
+  id INT NOT NULL AUTO_INCREMENT,
+  nombre VARCHAR(30) NOT NULL, 
+  apellidos VARCHAR(30) NOT NULL, 
+  correo VARCHAR(150) NOT NULL,
+  password VARCHAR(100) NOT NULL,
+  PRIMARY KEY (id)
+)
+ENGINE = InnoDB
+DEFAULT CHARACTER SET = utf8mb4;
+ 
+INSERT INTO proyecto.registro (id, nombre,apellidos,correo, password) VALUES
+(1, 'Melani','Espinoza','espinozamelani290@gmail.com', '$2y$10$aSd3XnFvGAoPftKYmDwe9ePGG2zWZIYCTDmKDDcyKVRDesaQO75Xm');
 -- --------------------------------------------------------
 
 --

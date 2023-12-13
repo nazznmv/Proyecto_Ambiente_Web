@@ -56,13 +56,18 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     echo "<header class='header'>
             <h1 class='logo'><a href='index.html'>Universiblog &nbsp<span>Tu Portal Informativo</span></a></h1>
             <ul class='main-nav'>
-                <li><a href='index.html'>Inicio</a></li>
-                <li><a href='consejos.html'>Consejos</a></li>
-                <li><a href='evaluacion_profes.html'>Evaluaciones</a></li>
-                <li><a href='horarios.html'>Horarios</a></li>
-                <li><a href='resenha_uni.html'>Reseña</a></li>
-                <li><a href='test_vocacional.html'>Test</a></li>
-                <li><a href='nosotros.html'>Nosotros</a></li>
+                <li><a href='index.php'>Inicio</a></li>
+                <li><a href='consejos.php'>Consejos</a></li>
+                <li><a href='evaluacion_profes.php'>Evaluaciones</a></li>
+                <li><a href='horarios.php'>Horarios</a></li>
+                <li><a href='resenha_uni.php'>Reseña</a></li>
+                <li><a href='test_vocacional.php'>Test</a></li>
+                <li><a href='nosotros.php'>Nosotros</a></li>
+                <li class='nav-item'>
+                <a class='nav-link' href='registro.php'>
+                 <i class='fas fa-user'></i> 
+                 </a>
+                 </li> 
             </ul>
         </header>";
     echo '<link rel="stylesheet" href="css/css.css">';

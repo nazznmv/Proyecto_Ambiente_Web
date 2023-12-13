@@ -6,36 +6,86 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Staatliches&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/h&f.css">
     <link rel="stylesheet" href="css/css.css">
     <link rel="stylesheet" href="fuentes/font.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
     <title>Blog Universitario</title>
 </head>
 <body>
-    <header class="header">
-        <h1 class="logo"><a href="index.php">Universiblog &nbsp<span>Tu Portal Informativo</span></a></h1>
-        <ul class="main-nav">
-            <li><a href="index.php">Inicio</a></li>
-            <li><a href="consejos.php">Consejos</a></li>
-            <li><a href="evaluacion_profes.php">Evaluaciones</a></li>
-            <li><a href="horarios.php">Horarios</a></li>
-            <li><a href="resenha_uni.php">Reseña</a></li>
-            <li><a href="test_vocacional.php">Test</a></li>
-            <li><a href="nosotros.php">Nosotros</a></li>
-            <li><a href="registro.php">Registro</a></li>
-        </ul>
-    </header> 
+    <!-----------HEADER----------->
+<header  th:fragment="header" class="header" >
+
+<nav class="navbar navbar-expand-lg navbar-dark "><div class="container-fluid">
+
+        <button
+            class="navbar-toggler"
+            type="button"
+            data-mdb-toggle="collapse"
+            data-mdb-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+            >
+            <i class="fas fa-bars"></i>
+        </button>
+        <!--Logo Imagen-->
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <img th:src="@{/css/imagenes/Logo.png}" alt=""/>
+
+            <!--Titulo-->
+            <a href="index.php" class="navbar-brand">Universiblog</a>
+
+            <!--Opciones de la Página-->
+            <div class="navbar-container">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+
+                <li class="nav-item">
+                    <a class="nav-link" href="index.php">Inicio</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="consejos.php">Consejos</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="evaluacion_profes.php">Evaluaciones</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="horarios.php">Horarios</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="resenha_uni.php">Reseña</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="test_vocacional.php">Test</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="nosotros.php">Nosotros</a>
+                </li>
+                
+                </ul>
+</div>
+        </div>
+
+
+    </div>
+    </div>
+</nav>
+
+
+</header>
+    <!-----------CONTENIDO----------->
 
     <img src="images/INDEX1.png" alt=""/>
-    <p>Bienvenido a nuestro rincón digital, donde la comunidad estudiantil se une, comparte y crece. 
+
+    <div></div>
+    <div class="p-format"><p style="font-size: 50px">¡Bienvenido a nuestro rincón digital!</p></div>
+    <div class="p-format2"><p>Donde la comunidad estudiantil se une, comparte y crece. 
         Haz de tu viaje universitario una experiencia excepcional con nosotros. ¡Descubre, conecta y 
-        avanza juntos!</p>
-    <section>
-        <div class="feature">
-            <h3 style="color: black;">Lee artículos escritos por estudiantes de distintas universidades del país,
-                con los que podrás aprender de sus experiencias en la universidad...
-            </h3>
-        </div>
-    </section>
+        avanza juntos! 
+    
+        </p></div>
+        
 
     <div class="image-block">
         <div class="image-container">
@@ -82,11 +132,16 @@
             </div>
         </div>
     </div>
+    <img src="images/BARRA.png" alt=""/><br>
 
-    <section>
-        <h2>Falta más texto</h2>
-        <p>más párrafo</p>
-    </section>
+    <div class="p-format2"><p>Lee artículos escritos por estudiantes de distintas universidades del país,
+                con los que podrás aprender de sus experiencias en la universidad..
+    
+        </p></div>
+   
+    <img src="images/NI1.png" alt=""/>
+
+    <!-----------FOOTER----------->
 
     <footer>
         <ul>

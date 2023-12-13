@@ -1,0 +1,9 @@
+.navbar-container{
+    display: flex;
+	text-align: right;
+}
+.navbar-brand{
+    font-family:Poppins-regular ;
+    size: 20px;
+
+}

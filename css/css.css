@@ -431,6 +431,16 @@ section {
     justify-content: space-around;
     margin: 2em 0;
   }
+  .p-format{
+    margin: 2em 9em;
+
+  }
+
+  .p-format2{
+    margin: 1em 6em;
+    font-size: 18px;
+
+  }
 
   .feature {
     flex: 1;
@@ -439,7 +449,8 @@ section {
     background-color: #fff;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
-    margin: 0 1em;
+    margin: 0 4em;
+   font-size: 8px;
   }
 
   .content {

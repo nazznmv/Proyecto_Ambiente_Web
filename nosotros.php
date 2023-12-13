@@ -87,9 +87,11 @@
                 horarios personalizados y útiles recursos para optimizar tu vida universitaria</p>
         </div>
     </section>
+    <img src="images/N1.png" alt="Fondo de Nosotros"/>
+
     <section>
         <div>
-            <br/>
+            
             <p class="lead">Pero esto no es solo un blog, es tu plataforma para expresar tus opiniones.
                 Comparte reseñas honestas sobre lo que amas y lo que crees que podría mejorar en tu 
                 universidad. ¿Tienes algo que decir sobre el último proyecto? ¿Quieres destacar un 
@@ -121,11 +123,9 @@
                 estudiantes, creando una comunidad en la que todos se sientan escuchados y comprendidos.
             </p>
         </div>
+
     </section>
-    <!-- Separador de Página -->
-    <section>
-    </section>
-    <!-- Separador de Página -->
+    <img src="images/N2.png" alt="Fondo de Nosotros"/>
     <section>
         <!-- Tercer bloque de texto -->
         <div>
@@ -139,6 +139,7 @@
                 ¡Haz que tu viaje universitario sea excepcional!</p>
         </div>
     </section>
+    <img src="images/NFINAL.png" alt="Fondo de Nosotros"/>
 
     <footer>
         <ul>

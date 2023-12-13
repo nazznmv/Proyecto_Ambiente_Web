@@ -4,6 +4,8 @@
     font-family: Poppins-Bold;
     text-align: center;
     justify-content: center;
+    margin: 2em 0 1em;
+
 }
 .h1-evaluacion{
     color: rgb(74, 25, 58);
@@ -11,6 +13,8 @@
     font-family: Poppins-Bold;
     text-align: center;
     justify-content: center;
+    margin: 2em 0 1em;
+
 }
 
 .contenedor-resenha{

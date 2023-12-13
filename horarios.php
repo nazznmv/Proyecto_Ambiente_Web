@@ -76,9 +76,9 @@
 
         <h2 class="h2-horarios">Creately</h2>
 
-        <h4 class="h4-horarios">Link:</h4>
+        <h4 class="h4-horarios">Link:</h4><br>
         <a class= "h4-horarios-url" href="https://creatly.com/es/usage/fabricante-de-horarios-escolares/" target="_blank">https://creatly.com/es/usage/fabricante-de-horarios-escolares/</a>
-
+<br>
         <h4 class="h4-horarios">Así se ve la página:</h4>
         <center>
             <img class="imagen-horarios" src="images/creately.png" alt="creately">
@@ -86,9 +86,9 @@
 
         <h2 class="h2-horarios">Coldideas</h2>
 
-        <h4 class="h4-horarios">Link:</h4>
+        <h4 class="h4-horarios">Link:</h4><br>
         <a class= "h4-horarios-url" href="https://horarios.coldideas.com" target="_blank">https://horarios.coldideas.com</a>
-
+        <br>
         <h4 class="h4-horarios">Así se ve la página:</h4>
         <center>
             <img class="imagen-horarios" src="images/coldideas.png" alt="coldideas">
@@ -96,9 +96,9 @@
 
         <h2 class="h2-horarios">Doodle</h2>
 
-        <h4 class="h4-horarios">Link:</h4>
+        <h4 class="h4-horarios">Link:</h4><br>
         <a class= "h4-horarios-url" href="https://doodle.com/es/generador-horarios/" target="_blank">https://doodle.com/es/generador-horarios/</a>
-
+        <br>
         <h4 class="h4-horarios">Así se ve la página:</h4>
         <center>
             <img class="imagen-horarios" src="images/doodle.png" alt="doodle">

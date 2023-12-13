@@ -77,9 +77,7 @@
     </div>
 </nav>
 </header>
-    <div class="contenedor-imagen">
-        <img src="images/consejo.png" width="1800" alt="Imagen adaptable">
-    </div>
+<img src="images/consejo.png" alt=""/>
     <br>
     <br>
     <div class="d-grid gap-2 col-6 mx-auto">

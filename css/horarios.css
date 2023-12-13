@@ -2,21 +2,34 @@
     color: rgb(74, 25, 58);
     size: 15px;
     font-family: Poppins-Bold;
+    text-align: center;
+    justify-content: center;
+    margin: 2em 0 1em;
+
+
 }
 
 .h2-horarios{
     color: rgb(74, 25, 58);
     font-family: Poppins-Bold;
+    text-align: center;
+    justify-content: center;
+    margin: 1.5em 0 1em;
+
 }
 
 .h4-horarios{
     color: rgb(74, 25, 58);
     font-family: Poppins-Bold;
+    text-align: center;
+    justify-content: center;
 }
 
 .h4-horarios-url{
     color:rgba(185, 137, 199, 1);
     font-family: Poppins-Bold;
+    text-align: center;
+    justify-content: center;
 }
 
 .imagen-horarios{

@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="css/css.css">
     <link rel="stylesheet" href="css/h&f.css">
     <link rel="stylesheet" href="css/consejos.css">
+    <link rel="stylesheet" href="fuentes/font.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <title>Foro para Estudiantes</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -23,8 +24,8 @@
     </script>
 </head>
 <body>
-        <!-----------HEADER----------->
-<header  th:fragment="header" class="header" >
+       <!-----------HEADER----------->
+       <header  th:fragment="header" class="header" >
 
 <nav class="navbar navbar-expand-lg navbar-dark "><div class="container-fluid">
 
@@ -39,10 +40,7 @@
             >
             <i class="fas fa-bars"></i>
         </button>
-        <!--Logo Imagen-->
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <img th:src="@{/css/imagenes/Logo.png}" alt=""/>
-
+       
             <!--Titulo-->
             <a href="index.php" class="navbar-brand">Universiblog</a>
 
@@ -70,12 +68,12 @@
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="nosotros.php">Nosotros</a>
-                </li> 
+                </li>  
                 <li class="nav-item">
                 <a class="nav-link" href="registro.php">
                  <i class="fas fa-user"></i> 
                  </a>
-                 </li>               
+                 </li>             
                 </ul>
 </div>
         </div>

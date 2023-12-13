@@ -33,6 +33,7 @@ body {
 
 .titulo-foro-registro {
     text-align: center;
+    font-family: Poppins-regular;
 }
 
 #contenedor {
@@ -49,7 +50,7 @@ body {
 }
 
 .botons {
-    background-color: #333;
+    background-color: #4f1a50;
     color: #fff;
     padding: 10px 20px;
     border: none;

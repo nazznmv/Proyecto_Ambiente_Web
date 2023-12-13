@@ -14,8 +14,19 @@
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
 
         <title>Horarios</title>
+        <style>
+    
+#body_horario{
+    background-image: url('images/calendario.png'); /* Reemplaza con la ruta correcta de tu imagen */
+    background-size: cover; /* Ajusta el tamaño de la imagen para cubrir todo el body */
+    background-position: center center; /* Ajusta la posición de la imagen al centro del body */
+    background-repeat: no-repeat; /* Evita la repetición de la imagen */
+    background-attachment: fixed; /* Fija la imagen de fondo, para que no se desplace con el contenido */}
+
+        
+    </style>
     </head>
-    <body>
+    <body id="body_horario">
            <!-----------HEADER----------->
 <header  th:fragment="header" class="header" >
 

@@ -33,6 +33,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <link href="https://fonts.googleapis.com/css2?family=Staatliches&display=swap" rel="stylesheet">
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/css.css">
+    <link rel="stylesheet" href="css/h&f.css">
+    <link rel="stylesheet" href="fuentes/font.css">
     <link rel="stylesheet" href="css/registro.css">
     <style>
         .vertical-line {
@@ -115,7 +117,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 <input class="controls" type="email" name="correo" id="correo" placeholder="Ingrese su Correo">
                 <input class="controls" type="password" name="password" id="password" placeholder="Ingrese su Contraseña">
                
-                <p>Estoy de acuerdo con <a href="#">Terminos y Condiciones</a></p>
+                <p style="font-size:14px;">Estoy de acuerdo con <a href="#">Terminos y Condiciones</a></p>
                
                 <input class="botons" type="submit" value="Registrar">
                
@@ -139,8 +141,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
  
         <label for="Password">Contraseña:</label>
         <input type="password" id="password" name="password" required><br><br>
- <br>
-        <input type="submit" value="Iniciar Sesión">
+ <br><br>
+        <input class="botons" type="submit" value="Iniciar Sesión">
     </form>
 </div>
 </div>

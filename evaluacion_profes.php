@@ -14,8 +14,35 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
 
     <title>Evaluación Docente</title>
+    <style>
+         .contenedor-evaluacion{
+	width:50%;
+	margin:auto;
+	padding:5px;
+	border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-image: url('images/form.png'); /* Reemplaza con la ruta correcta de tu imagen */
+    background-size: cover; /* Ajusta el tamaño de la imagen para cubrir todo el body */
+    background-position: center center; /* Ajusta la posición de la imagen al centro del body */
+    background-repeat: no-repeat; /* Evita la repetición de la imagen */
+    size: 20px;
+
+    
+}
+#body_evaluacion {
+    background-image: url('images/calendario.png'); /* Reemplaza con la ruta correcta de tu imagen */
+    background-size: cover; /* Ajusta el tamaño de la imagen para cubrir todo el body */
+    background-position: center center; /* Ajusta la posición de la imagen al centro del body */
+    background-repeat: no-repeat; /* Evita la repetición de la imagen */
+    background-attachment: fixed; /* Fija la imagen de fondo, para que no se desplace con el contenido */}
+
+ 
+
+        
+    </style>
 </head>
-<body>
+<body id="body_evaluacion">
         <!-----------HEADER----------->
 <header  th:fragment="header" class="header" >
 
@@ -32,10 +59,7 @@
             >
             <i class="fas fa-bars"></i>
         </button>
-        <!--Logo Imagen-->
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <img th:src="@{/css/imagenes/Logo.png}" alt=""/>
-
+       
             <!--Titulo-->
             <a href="index.php" class="navbar-brand">Universiblog</a>
 
@@ -76,10 +100,17 @@
     </div>
 </nav>
 </header>
+<br>
+    <div class="p-format"><p style="font-size: 50px">¿CONOCES A TUS PROFESORES?</p></div>
+    <div class="p-format2"><p>Si es así, comenta qué te parece la experiencia de haber llevado algún curso con ella/él
+        y compartí tu experiencia con los demás!  
+        </p></div>
+<section class="form-resenha">
 
     <h1 class="h1-evaluacion">Evaluación de docentes</h1>
-        <div class="contenedor-resenha">
+        <div class="contenedor-evaluacion">
             <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>">
+           
                 <label for="nombre">Nombre del docente:</label><br>
                 <input type="text" id="nombre" name="nombre" required><br>
 
@@ -92,9 +123,11 @@
                 <label for="experiencia">Experiencia:</label><br>
                 <textarea id="experiencia" name="experiencia" rows="4" required></textarea><br>
 
-                <button type="submit">Enviar</button>
+                <button class="btn  btn-dark mt-3 mb-3 rounded-pill" style="background-color: rgba(47, 0, 62, 1)" type="submit">Enviar</button>
             </form>
     </div>
+        </section>
+
     <footer>
         <ul>
             <li class="footer-p"><a href="politica-privacidad.html">Política de privacidad</a></li>

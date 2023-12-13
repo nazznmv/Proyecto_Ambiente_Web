@@ -25,16 +25,35 @@
 	border: 1px solid #ccc;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    size: 16px;
+    font-family: Poppins-Bold;
+    font-weight: 530;
+    
+}
+.contenedor-evaluacion{
+	width:50%;
+	margin:auto;
+	background-color:rgba(185, 137, 199, 1);
+	padding:5px;
+	border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    size: 16px;
+    font-family: Poppins-Bold;
+    font-weight: 530;
+
 }
 
 form{
     width: 50%;
     margin: auto;
+    
 }
 
 form label {
     display: block;
     margin: 10px 0;
+    
 }
 
 form input {
@@ -42,6 +61,7 @@ form input {
     padding: 10px;
     margin-bottom: 10px;
     box-sizing: border-box;
+    
 }
 
 form input[type="submit"] {
@@ -50,11 +70,14 @@ form input[type="submit"] {
     padding: 10px 20px;
     border: none;
     cursor: pointer;
+    
 }
 
 .contenedor-resenha label {
     display: block;
     margin: 10px 0;
+    
+    
 }
 
 .contenedor-resenha input {
@@ -62,6 +85,8 @@ form input[type="submit"] {
     padding: 10px;
     margin-bottom: 10px;
     box-sizing: border-box;
+    max-width: 100%;
+
 }
 
 .contenedor-resenha input[type="submit"] {
@@ -70,8 +95,16 @@ form input[type="submit"] {
     padding: 10px 20px;
     border: none;
     cursor: pointer;
+
+
+    
 }
 
 .contenedor-resenha input[type="submit"]:hover {
     background-color: #555;
+}
+
+.ev_text{
+    size: 15px;
+
 }

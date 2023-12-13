@@ -14,8 +14,31 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
 
     <title>Reseñas</title>
+    <style>
+         .contenedor-resenha{
+	width:50%;
+	margin:auto;
+	padding:15px 50px ;
+	border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    background-image: url('images/form2.png'); /* Reemplaza con la ruta correcta de tu imagen */
+    background-size: cover; /* Ajusta el tamaño de la imagen para cubrir todo el body */
+    background-position: center center; /* Ajusta la posición de la imagen al centro del body */
+    background-repeat: no-repeat; /* Evita la repetición de la imagen */
+    
+}
+#body_resenha{
+    background-image: url('images/resena.png'); /* Reemplaza con la ruta correcta de tu imagen */
+    background-size: cover; /* Ajusta el tamaño de la imagen para cubrir todo el body */
+    background-position: center center; /* Ajusta la posición de la imagen al centro del body */
+    background-repeat: no-repeat; /* Evita la repetición de la imagen */
+    background-attachment: fixed; /* Fija la imagen de fondo, para que no se desplace con el contenido */}
+
+        
+    </style>
 </head>
-<body>
+<body id="body_resenha">
         <!-----------HEADER----------->
 <header  th:fragment="header" class="header" >
 
@@ -76,7 +99,13 @@
     </div>
 </nav>
 </header>
+<br>
 
+    <div class="p-format"><p style="font-size: 50px">¿TENÉS ALGUNA OPINIÓN DE TU UNIVERSIDAD?</p></div>
+    <div class="p-format2"><p>Muchos estudiantes prefieren llevar sus clases en la sedes de sus universidades ubicadas el rededor del país,
+        por lo que deben de asistir a las instalaciones de estas. Si tenés alguna reseña de qué te gusta o qué debería mejorar en las 
+        instalaciones de tú Universidad, ¿Qué esperas?
+        </p></div>
     <section class="form-resenha">
         <h1 class="h1-resenha">Reseñas sobre la Universidad</h1>
         <div class="contenedor-resenha">
@@ -91,7 +120,7 @@
                 <label for="comentario">Comentario:</label>
                 <textarea id="comentario" name="comentario" rows="4" required></textarea><br>
 
-                <button type="submit">Enviar</button>
+                <button class="btn  btn-dark mt-3 mb-3 rounded-pill" style="background-color: rgba(47, 0, 62, 1)" type="submit">Enviar</button>
             </form>
         </div>
     </section>

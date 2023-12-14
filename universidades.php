@@ -114,53 +114,62 @@
     
         </p></div>
     <br>
-    <!-- Filtros -->
+   <!-- Filtros -->
 <div class="mb-3">
         <a href="universidades.php?filtro=todas" class="btn btn-primary">Mostrar Todas</a>
         <a href="universidades.php?filtro=publica" class="btn btn-warning">Mostrar Públicas</a>
         <a href="universidades.php?filtro=privada" class="btn btn-success">Mostrar Privadas</a>
     </div> 
-    <?php 
-    
-    $filtro = isset($_GET['filtro']) ? $_GET['filtro'] : 'todas';
 
-    if ($filtro == 'publica') {
-        $consulta = "SELECT nombre FROM universidad WHERE nivel = 1";
-    } elseif ($filtro == 'privada') {
-        $consulta = "SELECT nombre FROM universidad WHERE nivel = 0";
-    } else {
-        $consulta = "SELECT nombre FROM universidad";
-    }
-    
-    ?>
-
-
-<div class="container mt-4">
+    <div class="container mt-4">
+        <!-- Mostrar los nombre de u aquí -->
         <div class="row" id="comentariosContainer" style="font-family:Poppins-regular;">
-        <?php
-            include("conexion_db.php");
+    <?php
+    $servername = "localhost";
+    $username = "root";
+    $password = "mel";
+    $database = "proyecto";
+    
+    $conn = new mysqli($servername,$username,$password,$database);
 
-            $sql = "SELECT nombre FROM universidad";
-            $result = $conn->query($sql);
+// Verifica la conexión
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+}
 
-            if ($result && $result->num_rows > 0) {
-                while ($row = $result->fetch_assoc()) {
-                    echo "<div class='col-md-6 mb-3'>
-                        <div class='card'>
-                            <div class='card-body'>
-                                <h5 class='card-title'>" . $row['nombre'] .  "</h5>
-                            </div>
-                        </div>
-                    </div>";
-                }
-            } else {
-                echo "<p>No hay universidades aún.</p>";
-            }
+$filtro = isset($_GET['filtro']) ? $_GET['filtro'] : 'todas';
 
-            $conn->close();
-            ?>
+if ($filtro == 'publica') {
+    $consulta = "SELECT nombre FROM universidad WHERE nivel = 1";
+} elseif ($filtro == 'privada') {
+    $consulta = "SELECT nombre FROM universidad WHERE nivel = 0";
+} else {
+    $consulta = "SELECT nombre FROM universidad";
+}
+
+$resultado = $conn->query($consulta);
+
+if ($resultado->num_rows > 0) {
+    // Imprimir los datos de cada fila
+    while ($row  = $resultado->fetch_assoc()) {
+        echo "<div class='col-md-6 mb-3'>
+        <div class='card'>
+            <div class='card-body'>
+                <h5 class='card-title'>" . $row['nombre'] .  "</h5>
+            </div>
         </div>
+    </div>";
+    }
+} else {
+    echo "0 resultados";
+}
+
+$conn->close();
+?>
+
+</div>
     </div>
+    
 
   
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>

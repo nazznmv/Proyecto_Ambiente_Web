@@ -1,23 +1,31 @@
+
 <?php
-
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-
     include("conexion_db.php");
 
-    if (isset($_POST["nombre_docente"]) && isset($_POST["curso"])&& isset($_POST["carrera"]) && isset($_POST["experiencia"])) {
-        $nombre_docente = $_POST["nombre_docente"];
-        $curso = $_POST["curso"];
-        $carrera = $_POST["carrera"];
-        $experiencia = $_POST["experiencia"];
-        
-        $sql = "INSERT INTO evaluacion (nombre_docente, curso, carrera, experiencia) VALUES ('$nombre_docente', '$curso','$carrera', '$experiencia')";
-        
-    
-    if ($conn->query($sql) === TRUE) {
-        echo "REvaluación agregada con éxito.";
+    // Obtener y limpiar los datos del formulario
+    $nombre_docente = mysqli_real_escape_string($conn, $_POST['nombre_docente']);
+    $curso = mysqli_real_escape_string($conn, $_POST['curso']);
+    $carrera = mysqli_real_escape_string($conn, $_POST['carrera']);
+    $experiencia = mysqli_real_escape_string($conn, $_POST['experiencia']);
+
+    // Verificar si los campos no están vacíos
+    if (!empty($nombre_docente) && !empty($curso) && !empty($carrera) && !empty($experiencia)) {
+        $sql = "INSERT INTO evaluacion (nombre_docente,curso, carrera, experiencia) VALUES ('$nombre_docente', '$curso', '$carrera', '$experiencia')";
+
+        // Ejecutar la consulta SQL
+        if ($conn && $conn->query($sql) === TRUE) {
+            header("Location: evaluacion_profes.php"); 
+        exit();
+        } else {
+            echo "Error al agregar evaluacion: " . $conn->error;
+        }
     } else {
-        echo "Error al agregar la evaluación: " . $conn->error;
+        echo "Por favor, completa todos los campos del formulario.";
     }
-}
+
+
+    // Cerrar la conexión a la base de datos
+    $conn->close();
 }
 ?>

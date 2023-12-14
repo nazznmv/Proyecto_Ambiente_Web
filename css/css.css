@@ -83,6 +83,7 @@ a {
 	-webkit-border-radius: 5px;
 	-moz-border-radius: 5px;
 	border-radius: 5px;
+
 }
 
 footer {
@@ -437,11 +438,13 @@ section {
     display: flex;
     justify-content: space-around;
     margin: 2em 0;
+    text-decoration: none;
+
   }
   .p-format{
     margin: 2em 9em;
-
   }
+  
 
   .p-format2{
     margin: 1em 6em;
@@ -568,4 +571,6 @@ section {
     font-size: 1.25rem;
     font-weight: 300;
     margin: 2em;  }
+  /**************FINAL NOSOTROS*******/
+
   

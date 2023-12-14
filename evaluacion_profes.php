@@ -26,18 +26,14 @@
     background-size: cover; /* Ajusta el tamaño de la imagen para cubrir todo el body */
     background-position: center center; /* Ajusta la posición de la imagen al centro del body */
     background-repeat: no-repeat; /* Evita la repetición de la imagen */
-    size: 20px;
-
-    
+    size: 20px;   
 }
 #body_evaluacion {
-    background-image: url('images/calendario.png'); /* Reemplaza con la ruta correcta de tu imagen */
+    background-image: url('images/evaluacion.png'); /* Reemplaza con la ruta correcta de tu imagen */
     background-size: cover; /* Ajusta el tamaño de la imagen para cubrir todo el body */
     background-position: center center; /* Ajusta la posición de la imagen al centro del body */
     background-repeat: no-repeat; /* Evita la repetición de la imagen */
     background-attachment: fixed; /* Fija la imagen de fondo, para que no se desplace con el contenido */}
-
- 
 
         
     </style>
@@ -109,10 +105,10 @@
 
     <h1 class="h1-evaluacion">Evaluación de docentes</h1>
         <div class="contenedor-evaluacion">
-            <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>">
+            <form method="POST" action="procesar_evaluacion.php">
            
-                <label for="nombre">Nombre del docente:</label><br>
-                <input type="text" id="nombre" name="nombre" required><br>
+                <label for="nombre_docente">Nombre del docente:</label><br>
+                <input type="text" id="nombre_docente" name="nombre_docente" required><br>
 
                 <label for="curso">Curso que imparte:</label><br>
                 <input type="text" id="curso" name="curso" required><br>

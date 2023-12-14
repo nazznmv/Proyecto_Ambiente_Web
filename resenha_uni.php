@@ -109,20 +109,20 @@
     <section class="form-resenha">
         <h1 class="h1-resenha">Reseñas sobre la Universidad</h1>
         <div class="contenedor-resenha">
-            <form action="procesar_resenha.php" method="post">
-            <form action="<?php echo htmlspecialchars_decode($_SERVER["PHP_SELF"]); ?>" method="post"></form>
-                <label for="nombre">Nombre:</label>
-                <input type="text" id="nombre" name="nombre" required>
+            <form method="POST" action="procesar_resenha.php">
+           
+                <label for="nombre">Nombre:</label><br>
+                <input type="text" id="nombre" name="nombre" required><br>
 
-                <label for="apellido">Apellido:</label>
-                <input type="text" id="apellido" name="apellido" required>
-
-                <label for="comentario">Comentario:</label>
+                <label for="fecha">Fecha:</label><br>
+                <input type="date" id="fecha" name="fecha" required><br>
+       
+                <label for="comentario">Comentario:</label><br>
                 <textarea id="comentario" name="comentario" rows="4" required></textarea><br>
 
                 <button class="btn  btn-dark mt-3 mb-3 rounded-pill" style="background-color: rgba(47, 0, 62, 1)" type="submit">Enviar</button>
             </form>
-        </div>
+    </div>
     </section>
     
 

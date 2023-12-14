@@ -16,7 +16,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         
         if ($conn->query($sql) === TRUE) {
             echo "Registro agregado con éxito.";
-            header("Location: index.php");
+            header("Location: exito.php");
         } else {
             echo "Error al agregar registro: " . $conn->error;
         }
@@ -45,65 +45,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 </head>
 <body>
  
-<header  th:fragment="header" class="header" >
 
-<nav class="navbar navbar-expand-lg navbar-dark "><div class="container-fluid">
 
-        <button
-            class="navbar-toggler"
-            type="button"
-            data-mdb-toggle="collapse"
-            data-mdb-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-            >
-            <i class="fas fa-bars"></i>
-        </button>
-        <!--Logo Imagen-->
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <img th:src="@{/css/imagenes/Logo.png}" alt=""/>
-
-            <!--Titulo-->
-            <a href="index.php" class="navbar-brand">Universiblog</a>
-
-            <!--Opciones de la Página-->
-            <div class="navbar-container">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-
-                <li class="nav-item">
-                    <a class="nav-link" href="index.php">Inicio</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="consejos.php">Consejos</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="evaluacion_profes.php">Evaluaciones</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="horarios.php">Horarios</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="resenha_uni.php">Reseña</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="test_vocacional.php">Test</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="nosotros.php">Nosotros</a>
-                </li> 
-                <li class="nav-item">
-                <a class="nav-link" href="registro.php">
-                 <i class="fas fa-user"></i> 
-                 </a>
-                 </li>               
-                </ul>
-</div>
-        </div>
-    </div>
-    </div>
-</nav>
-</header>
     <section  class="container-fluid align-center">
     <div class="container">
     <div class="row">
@@ -111,17 +54,16 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <div class="form-register">
                     <h1 class="titulo-foro-registro">Formulario Registro</h1>
                     <form action="registro.php" method="post">
-            <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
-                <input class="controls" type="text" name="nombre" id="nombre" placeholder="Ingrese su Nombre">
-                <input class="controls" type="text" name="apellidos" id="apellidos" placeholder="Ingrese su Apellido">
-                <input class="controls" type="email" name="correo" id="correo" placeholder="Ingrese su Correo">
-                <input class="controls" type="password" name="password" id="password" placeholder="Ingrese su Contraseña">
+            <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post" >
+                <input class="controls" type="text" name="nombre" id="nombre" placeholder="Ingrese su Nombre" style="font-family:Poppins-regular;">
+                <input class="controls" type="text" name="apellidos" id="apellidos" placeholder="Ingrese su Apellido" style="font-family:Poppins-regular;">
+                <input class="controls" type="email" name="correo" id="correo" placeholder="Ingrese su Correo" style="font-family:Poppins-regular;">
+                <input class="controls" type="password" name="password" id="password" placeholder="Ingrese su Contraseña" style="font-family:Poppins-regular;">
                
                 <p style="font-size:14px;">Estoy de acuerdo con <a href="#">Terminos y Condiciones</a></p>
                
-                <input class="botons" type="submit" value="Registrar">
+                <input class="botons" type="submit" value="Registrar" style="font-family:Poppins-regular;">
                
-                <p><a href="#">¿Ya tengo Cuenta?</a></p>
             </form>
            
         </div>
@@ -136,13 +78,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
          <div class="login-container pl-1">
                     <h1 class="titulo-foro-registro">Iniciar Sesión</h1>
                     <form id="loginForm" action="login.php" method="POST">
-        <label for="inputEmail">Nombre de usuario:</label>
+        <label for="inputEmail" style="font-family:Poppins-regular;">Nombre de usuario:</label>
         <input type="email"  name="correo" id="inputEmail" required><br><br>
  
-        <label for="Password">Contraseña:</label>
+        <label for="Password" style="font-family:Poppins-regular;">Contraseña:</label>
         <input type="password" id="password" name="password" required><br><br>
  <br><br>
-        <input class="botons" type="submit" value="Iniciar Sesión">
+        <input class="botons" type="submit" value="Iniciar Sesión" style="font-family:Poppins-regular;">
     </form>
 </div>
 </div>

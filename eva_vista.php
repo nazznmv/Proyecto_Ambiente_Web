@@ -47,7 +47,7 @@
     background-position: center center; /* Ajusta la posición de la imagen al centro del body */
     background-repeat: repeat; /* Evita la repetición de la imagen */
     width: 100%; /* Ajusta el ancho de la tarjeta según tus necesidades */
-    height: 100px; /* Ajusta la altura de la tarjeta según tus necesidades */
+    height: 140px; /* Ajusta la altura de la tarjeta según tus necesidades */
 
 }
 .card img {
@@ -115,7 +115,7 @@
     </div>
 </nav>
 </header>
-<img src="images/consejo.png" alt=""/>
+<img src="images/EDOC.png" alt=""/>
     <br>
     <div class="p-format"><p style="font-size: 50px">¡Mira qué evaluaciones tienen tus profesores!</p></div>
     
@@ -127,7 +127,7 @@
         <?php
             include("conexion_db.php");
 
-            $sql = "SELECT nombre_docente, curso, carrera, experiencia FROM evaluacion";
+            $sql = "SELECT universidad, nombre_docente, curso, carrera, experiencia FROM evaluacion";
             $result = $conn->query($sql);
 
             if ($result && $result->num_rows > 0) {
@@ -135,16 +135,18 @@
                     echo "<div class='col-md-6 mb-3'>
                         <div class='card'>
                             <div class='card-body'>
-                                <h5 class='card-title' style='font-family: Poppins-Bold'>" . $row['nombre_docente'] . "</h5>
-                                <h5 class='card-text'>" . $row['curso'] . " " . $row['carrera'] . "</h5>
-                                <p class='card-text'>" . $row['experiencia'] . "</p>
+                                <h5 class='card-title' style='font-family: Poppins-Bold'>" . $row['universidad'] . "</h5>
+                                <h5 class='card-text' style='font-family: Poppins-regular'>" . $row['nombre_docente'] . "</h5>
+
+                                <h7 class='card-text' style='font-family: Poppins-regular'>" . $row['curso'] . " ".' - '."" . $row['carrera'] . "</h7>
+                                <p class='card-text' style='font-family: Poppins-regular'>".'" '."" . $row['experiencia'] . "".' "'."</p>
                             
                             </div>
                         </div>
                     </div>";
                 }
             } else {
-                echo "<p>No hay comentarios aún.</p>";
+                echo "<p>No hay evaluaciones aún.</p>";
             }
 
             $conn->close();

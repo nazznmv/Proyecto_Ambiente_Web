@@ -117,6 +117,9 @@
     <h1 class="h1-evaluacion">Evaluación de docentes</h1>
         <div class="contenedor-evaluacion">
             <form method="POST" action="procesar_evaluacion.php">
+                
+            <label for="universidad">Universidad donde imparte:</label><br>
+                <input type="text" id="universidad" name="universidad" required><br>
            
                 <label for="nombre_docente">Nombre del docente:</label><br>
                 <input type="text" id="nombre_docente" name="nombre_docente" required><br>

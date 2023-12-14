@@ -122,7 +122,9 @@
         <h1 class="h1-resenha">Reseñas sobre la Universidad</h1>
         <div class="contenedor-resenha">
             <form method="POST" action="procesar_resenha.php">
-           
+            <label for="universidad">Universidad:</label><br>
+                <input type="text" id="universidad" name="universidad" required><br>
+
                 <label for="nombre">Nombre:</label><br>
                 <input type="text" id="nombre" name="nombre" required><br>
 
@@ -136,8 +138,8 @@
             </form>
     </div>
     </section>
-    <div class="p-formatc"><a href="eva_vista.php" style="text-decoration: none;"><p style="font-size: 30px; " >
-        ¡Mira las evaluaciones de otros estudiantes aquí!</p></a></div>
+    <div class="p-formatc"><a href="rese_vista.php" style="text-decoration: none;"><p style="font-size: 30px; " >
+        ¡Mira las reseñas de otros estudiantes aquí!</p></a></div>
 
     <footer>
         <ul>

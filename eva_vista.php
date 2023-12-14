@@ -24,29 +24,38 @@
     </script>
 
     <style>
-          .mb-3 {
-    text-align: center; 
-}
+.p-formatc a{
+    margin: 2em 9em;
+    font-size: 30px;
 
-/* Estilo para los enlaces de filtro */
-.mb-3 a {
-    display: inline-block; /* Hace que los enlaces se muestren en línea */
-    margin: 5px; 
-    padding: 10px 20px; 
-    background-color: purple; 
-    color: #fff; 
-    text-decoration: none; /* Elimina el subrayado del texto */
-    border: none; 
+    transition: font-size 0.3s;
+
+  }
+  .p-formatc a:hover{
+ 
+    font-size: 36px;
+
+  }
+  #btnMostrarFormulario{
+  text-decoration: none; /* Elimina el subrayado del texto */
     border-radius: 5px; 
-    font-family:Poppins-regular;
+    font-family:Poppins-Bold; 
 }
-.card-body{
-    background-image: url('images/fondoU.png'); /* Reemplaza con la ruta correcta de tu imagen */
-    background-position: center center; /* Ajusta la posición de la imagen al centro del body */
-    background-repeat: no-repeat; /* Evita la repetición de la imagen */
-    background-attachment: fixed; /* Fija la imagen de fondo, para que no se desplace con el contenido */} 
 
-        </style>
+.card-body{
+    background-image: url('images/borde.png'); /* Reemplaza con la ruta correcta de tu imagen */
+    background-position: center center; /* Ajusta la posición de la imagen al centro del body */
+    background-repeat: repeat; /* Evita la repetición de la imagen */
+    width: 100%; /* Ajusta el ancho de la tarjeta según tus necesidades */
+    height: 100px; /* Ajusta la altura de la tarjeta según tus necesidades */
+
+}
+.card img {
+    width: 100%; /* Ajusta el ancho de la imagen dentro de la tarjeta según tus necesidades */
+    height: auto; /* Mantiene la proporción de la imagen y ajusta automáticamente la altura */
+}
+  
+    </style>
 </head>
 <body>
        <!-----------HEADER----------->
@@ -106,41 +115,19 @@
     </div>
 </nav>
 </header>
-<img src="images/UNIVERSIDAD.png" alt=""/>
+<img src="images/consejo.png" alt=""/>
     <br>
-    <div class="p-format"><p style="font-size: 50px">¡Conoce las distintas Universidades que hay!</p></div>
-    <div class="p-format2"><p>Aquí podrás ver todas las Universidades que tiene Costa Rica para ofreces, desde públicas hasta privadas,
-        visita los sitios web que cada una de estas ofrecen 
+    <div class="p-format"><p style="font-size: 50px">¡Mira qué evaluaciones tienen tus profesores!</p></div>
     
-        </p></div>
     <br>
-    <!-- Filtros -->
-<div class="mb-3">
-        <a href="universidades.php?filtro=todas" class="btn btn-primary">Mostrar Todas</a>
-        <a href="universidades.php?filtro=publica" class="btn btn-warning">Mostrar Públicas</a>
-        <a href="universidades.php?filtro=privada" class="btn btn-success">Mostrar Privadas</a>
-    </div> 
-    <?php 
-    
-    $filtro = isset($_GET['filtro']) ? $_GET['filtro'] : 'todas';
-
-    if ($filtro == 'publica') {
-        $consulta = "SELECT nombre FROM universidad WHERE nivel = 1";
-    } elseif ($filtro == 'privada') {
-        $consulta = "SELECT nombre FROM universidad WHERE nivel = 0";
-    } else {
-        $consulta = "SELECT nombre FROM universidad";
-    }
-    
-    ?>
-
 
 <div class="container mt-4">
-        <div class="row" id="comentariosContainer" style="font-family:Poppins-regular;">
+        <!-- Mostrar los comentarios aquí -->
+        <div class="row" id="comentariosContainer">
         <?php
             include("conexion_db.php");
 
-            $sql = "SELECT nombre FROM universidad";
+            $sql = "SELECT nombre_docente, curso, carrera, experiencia FROM evaluacion";
             $result = $conn->query($sql);
 
             if ($result && $result->num_rows > 0) {
@@ -148,13 +135,16 @@
                     echo "<div class='col-md-6 mb-3'>
                         <div class='card'>
                             <div class='card-body'>
-                                <h5 class='card-title'>" . $row['nombre'] .  "</h5>
+                                <h5 class='card-title' style='font-family: Poppins-Bold'>" . $row['nombre_docente'] . "</h5>
+                                <h5 class='card-text'>" . $row['curso'] . " " . $row['carrera'] . "</h5>
+                                <p class='card-text'>" . $row['experiencia'] . "</p>
+                            
                             </div>
                         </div>
                     </div>";
                 }
             } else {
-                echo "<p>No hay universidades aún.</p>";
+                echo "<p>No hay comentarios aún.</p>";
             }
 
             $conn->close();
@@ -162,7 +152,9 @@
         </div>
     </div>
 
-  
+    
+
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 </body>
 </html>

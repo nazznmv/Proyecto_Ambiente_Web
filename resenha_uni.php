@@ -35,6 +35,18 @@
     background-repeat: no-repeat; /* Evita la repetición de la imagen */
     background-attachment: fixed; /* Fija la imagen de fondo, para que no se desplace con el contenido */}
 
+    .p-formatc a{
+    margin: 2em 9em;
+    font-size: 30px;
+
+    transition: font-size 0.3s;
+
+  }
+  .p-formatc a:hover{
+ 
+    font-size: 36px;
+
+  }
         
     </style>
 </head>
@@ -124,7 +136,8 @@
             </form>
     </div>
     </section>
-    
+    <div class="p-formatc"><a href="eva_vista.php" style="text-decoration: none;"><p style="font-size: 30px; " >
+        ¡Mira las evaluaciones de otros estudiantes aquí!</p></a></div>
 
     <footer>
         <ul>

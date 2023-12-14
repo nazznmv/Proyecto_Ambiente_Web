@@ -75,8 +75,7 @@ a {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 	padding-top: 12px;
 	padding-bottom: 15px;
-    background: rgb(47,0,62);
-    background: linear-gradient(90deg, rgb(50, 2, 66) 0%, rgb(185,137,199,1) 40%, rgb(234, 233, 235) 100%);
+    background: rgb(64, 4, 83);
 	-webkit-box-shadow: 0px 0px 14px 0px rgba(0,0,0,0.75);
 	-moz-box-shadow: 0px 0px 14px 0px rgba(0,0,0,0.75);
 	box-shadow: 0px 0px 14px 0px rgba(0,0,0,0.75);
@@ -84,6 +83,7 @@ a {
 	-moz-border-radius: 5px;
 	border-radius: 5px;
 	text-align: right;
+  justify-content: right;
 
 }
 

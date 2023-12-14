@@ -36,32 +36,32 @@
             <img th:src="@{/css/imagenes/Logo.png}" alt=""/>
 
             <!--Titulo-->
-            <a href="menu.php" class="navbar-brand">Universiblog</a>
+            <a href="registro.php" class="navbar-brand">Universiblog</a>
 
             <!--Opciones de la Página-->
             <div class="navbar-container">
-            <ul class="navbar-nav ms-auto mb-2 mb-lg-0 "> <!-- Cambio realizado aquí -->
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
 
                 <li class="nav-item">
-                    <a class="nav-link" href="index.php">Inicio</a>
+                    <a class="nav-link" href="registro.php">Inicio</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="consejos.php">Consejos</a>
+                    <a class="nav-link" href="registro.php">Consejos</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="evaluacion_profes.php">Evaluaciones</a>
+                    <a class="nav-link" href="registro.php">Evaluaciones</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="horarios.php">Horarios</a>
+                    <a class="nav-link" href="registro.php">Horarios</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="resenha_uni.php">Reseña</a>
+                    <a class="nav-link" href="registro.php">Reseña</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="test_vocacional.php">Test</a>
+                    <a class="nav-link" href="registro.php">Test</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="nosotros.php">Nosotros</a>
+                    <a class="nav-link" href="registro.php">Nosotros</a>
                 </li>     
                 <li class="nav-item">
                 <a class="nav-link" href="registro.php">
@@ -153,4 +153,3 @@
     </footer>
 </body>
 </html>
-

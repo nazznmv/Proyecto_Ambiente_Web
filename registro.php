@@ -41,9 +41,21 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     border-left: 1px solid #ccc;
     height: 100%;
 }
-        </style>
+        
+        
+#body_registro {
+    background-image: url('images/evaluacion.png'); /* Reemplaza con la ruta correcta de tu imagen */
+    background-size: cover; /* Ajusta el tamaño de la imagen para cubrir todo el body */
+    background-position: center center; /* Ajusta la posición de la imagen al centro del body */
+    background-repeat: no-repeat; /* Evita la repetición de la imagen */
+    background-attachment: fixed; /* Fija la imagen de fondo, para que no se desplace con el contenido */}
+    
+
+  
+        
+    </style>
 </head>
-<body>
+<body id="body_registro">
  
 
 

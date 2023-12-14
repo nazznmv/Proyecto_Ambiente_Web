@@ -1,3 +1,23 @@
+<?php
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    include("conexion_db.php");
+
+    if (isset($_POST['eliminarConsejo'])) {
+        $idConsejo = mysqli_real_escape_string($conn, $_POST['idConsejo']);
+        // Realizar la eliminación en la base de datos
+        $sql = "DELETE FROM consejos WHERE id_Consejos = '$idConsejo'";
+        // Ejecutar la consulta
+        if ($conn->query($sql) === TRUE) {
+            echo "Consejo eliminado correctamente.";
+        } else {
+            echo "Error al eliminar el consejo: " . $conn->error;
+        }
+    }
+
+    $conn->close();
+}
+?>
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -125,8 +145,43 @@
         </p></div>
     <br>
     <div class="d-grid gap-2 col-6 mx-auto">
-    <button class="btn  btn-outline-dark mt-3 mb-3 rounded-pill" id="btnMostrarFormulario">¿Tienes un consejo para compartir?</button>
+    <button class="btn btn-outline-dark mt-3 mb-3 rounded-pill" id="btnMostrarFormulario">¿Tienes un consejo para compartir?</button>
+    <button class="btn btn-danger rounded-pill" id="btnEliminar">Eliminar</button>
+    <button class="btn btn-primary rounded-pill" id="btnEditar">Editar</button>
+   
 </div>
+
+<!-- Formulario para eliminar -->
+<div id="formularioEliminar" style="display: none;">
+    <form action="consejos.php" method="post">
+        <label for="idConsejo">ID del consejo:</label>
+        <input type="text" id="idConsejo" name="idConsejo" required>
+<button type="submit" name="eliminarConsejo">Eliminar</button>
+
+    </form>
+</div>
+<!-- Formulario para editar  -->
+<div id="formularioEditar" style="display: none;">
+    <form action="procesar_editar_consejo.php" method="post">
+        <label for="idConsejo">ID del consejo:</label>
+        <input type="text" id="idConsejo" name="idConsejo" required>
+        <div class="mb-3">
+            <label for="nombre" class="form-label">Nombre:</label>
+            <input type="text" class="form-control" id="nombre" name="nombre" required>
+        </div>
+        <div class="mb-3">
+            <label for="apellidos" class="form-label">Apellidos:</label>
+            <input type="text" class="form-control" id="apellidos" name="apellidos" required>
+        </div>
+        <div class="mb-3">
+            <label for="comentario" class="form-label">Comentario:</label>
+            <textarea class="form-control" id="comentario" name="comentario" rows="3" required></textarea>
+        </div>
+        <button type="submit" name="editarConsejo">Editar</button>
+    </form>
+</div>
+
+
     <div class="container">
     
     <div id="formularioConsejo" style="display: none;">
@@ -178,6 +233,9 @@
 
     <div class="p-formatc"><a href="universidades.php" style="text-decoration: none;"><p style="font-size: 30px; " >
         ¡Conoce tus Universidades aquí!</p></a></div>
+
+
+        
 
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
